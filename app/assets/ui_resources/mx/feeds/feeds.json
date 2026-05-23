@@ -1,0 +1,180 @@
+{
+    "feeds": [{
+            "feed_id": "news-rss-main",
+            "feed_type": "rss",
+            "scope": "news",
+            "settings": {
+                "cache": {
+                    "namespace": "rss:news",
+                    "ttl_sec": 300
+                },
+                "delivery": "redirect",
+                "polling": {
+                    "enabled": false
+                }
+            },
+            "endpoints": [{
+                    "feed_key": "football",
+                    "title": "Liga MX",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/futbol/liga-mx.xml"
+                },
+                {
+                    "feed_key": "lucha",
+                    "title": "Lucha Libre",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/lucha-libre.xml"
+                },
+                {
+                    "feed_key": "basketball",
+                    "title": "NBA",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/basquetbol/nba.xml"
+                },
+                {
+                    "feed_key": "tennis",
+                    "title": "Tenis",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/tenis.xml"
+                },
+                {
+                    "feed_key": "formula1",
+                    "title": "Fórmula 1",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/motor/f1.xml"
+                },
+                {
+                    "feed_key": "motosport",
+                    "title": "Motociclismo",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/motor/motociclismo.xml"
+                },
+                {
+                    "feed_key": "boxing",
+                    "title": "Boxeo",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/boxeo.xml"
+                },
+                {
+                    "feed_key": "ufc",
+                    "title": "UFC",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/ufc.xml"
+                },
+                {
+                    "feed_key": "baseball",
+                    "title": "MLB",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/beisbol/mlb.xml"
+                },
+                {
+                    "feed_key": "concachampions",
+                    "title": "Concachampions",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/futbol/liga-campeones-concaf.xml"
+                },
+                {
+                    "feed_key": "mexico_team",
+                    "title": "Selección de México",
+                    "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/futbol/seleccion-mx.xml"
+                }
+            ]
+        },
+        {
+            "feed_id": "matches-main",
+            "feed_key": "matches",
+            "feed_type": "openapi",
+            "title": "Partidos",
+            "scope": "events",
+            "api_url": "https://parser.pcom1.ru",
+            "api_version": "v4",
+            "tabs":[
+                {
+                    "key": "football",
+                    "title": "Fútbol"
+                },
+                {
+                    "key": "basketball",
+                    "title": "Baloncesto"
+                },
+                {
+                    "key": "tennis",
+                    "title": "Tenis"
+                },
+                {
+                    "key": "voleybol",
+                    "title": "Voleibol"
+                },
+                {
+                    "key": "hockey",
+                    "title": "Hockey sobre hielo"
+                },
+                {
+                    "key": "esports",
+                    "title": "eSports"
+                }
+            ],
+            "settings": {
+                "quickstart": {
+                    "endpoint": "/v4/events?sports=all&per_sport_limit=10&limit=100&lang=mx"
+                },
+                "page": {
+                    "endpoint": "/v4/events?sports={sports}&cursor={cursor}&limit=100&lang=mx"
+                },
+                "polling": {
+                    "endpoint": "/v4/events/polling?last_revision={revision}&limit=100&lang=mx"
+                },
+                "cache": {
+                    "namespace": "events",
+                    "ttl_sec": 86400,
+                    "revision_key": "meta.revision"
+                }
+            },
+            "api": {
+                "list": "/v4/events",
+                "polling": "/v4/events/polling",
+                "id": "/v4/events/{id}"
+            },
+            "mapping": {
+                "event_uid": "id",
+                "sport.key": "sport_key",
+                "sport.name": "sport_title",
+                "competition.key": "league_key",
+                "competition.name": "competition_name",
+                "country.name": "competition_subtitle",
+                "competition.logo_url": "competition_logo",
+                "participants.home.name": "team_home_name",
+                "participants.home.logo_url": "team_home_logo",
+                "participants.away.name": "team_away_name",
+                "participants.away.logo_url": "team_away_logo",
+                "score.home": "team_home_score",
+                "score.away": "team_away_score",
+                "period.time": "match_time",
+                "start_time_utc": "kickoff_at",
+                "status": "status",
+                "markets.0.odds.home": "odds_home",
+                "markets.0.odds.draw": "odds_draw",
+                "markets.0.odds.away": "odds_away",
+                "markets.0.selections.0.c": "has_odds",
+                "meta.ui.block_type": "block_type"
+            }
+        },
+        {
+            "feed_id": "offers-main",
+            "feed_key": "offers",
+            "token_type": "Bearer",
+            "feed_type": "openapi",
+            "title": "Ofertas",
+            "scope": "offers",
+            "api_url": "https://pcom1.ru",
+            "api_version": "v1",
+            "settings": {
+                "liquickstartst": {
+                    "endpoint": "/odds/v1/mobile/offers"
+                },
+                "polling": {
+                    "endpoint": "/odds/v1/mobile/offers/poll"
+                },
+                "cache": {
+                    "namespace": "offers",
+                    "ttl_sec": 86400
+                }
+            },
+            "api": {
+                "list": "/odds/v1/mobile/offers",
+                "polling": "/odds/v1/mobile/offers/poll",
+                "id": "/odds/v1/mobile/offers/{id}"
+            }
+        }
+    ]
+}

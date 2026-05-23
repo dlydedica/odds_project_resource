@@ -1,0 +1,2010 @@
+{
+  "type": "matchesUiResponse",
+  "schema_version": "1.0.0",
+  "tab_id": "matches",
+  "data_source": {
+    "mode": "single",
+    "feed_id": "matches-main",
+    "mapper": "matches.v1",
+    "required": true
+  },
+  "routing_contract": {
+    "version": "1.0.0",
+    "section_id": "matches",
+    "mode": "two_level",
+    "default_card_type": "simple",
+    "pattern": "tab/{firstLevelId}/{secondLevelId}",
+    "active_path_default": "tab/all/all",
+    "keys": {
+      "first_level": {
+        "source_field": "sport_key",
+        "title_field": "sport_title",
+        "unknown_id": "other",
+        "unknown_title": "Другое"
+      },
+      "second_level": {
+        "source_field": "league_key",
+        "title_field": "competition_name",
+        "parent_field": "sport_key",
+        "null_id": "all",
+        "null_title": "Все"
+      }
+    },
+    "policies": {
+      "first_level_sort": "alpha",
+      "second_level_sort": "alpha",
+      "include_empty_first_level": false,
+      "emit_all_second_level_for_each_first": true
+    }
+  },
+  "scorex_tokens": {
+    "font_family": "Roboto",
+    "radius_card": 14,
+    "radius_block": 12,
+    "radius_pill": 999,
+    "spacing_x": 16,
+    "spacing_y": 12,
+    "color_accent": "#F52F3B",
+    "color_bg_primary": "#FFFFFF",
+    "color_bg_secondary": "#F5F5F5",
+    "color_bg_dark": "#111111",
+    "color_text_primary": "#111111",
+    "color_text_secondary": "#777777",
+    "color_text_tertiary": "#AAAAAA",
+    "color_border": "#E0E0E0",
+    "color_text_on_dark": "#FFFFFF"
+  },
+  "scorex_tokens_dark": {
+    "font_family": "Roboto",
+    "radius_card": 14,
+    "radius_block": 12,
+    "radius_pill": 999,
+    "spacing_x": 16,
+    "spacing_y": 12,
+    "color_accent": "#F52F3B",
+    "color_bg_primary": "#0D0D0D",
+    "color_bg_secondary": "#1E1E1E",
+    "color_bg_dark": "#0D0D0D",
+    "color_text_primary": "#FFFFFF",
+    "color_text_secondary": "#AAAAAA",
+    "color_text_tertiary": "#666666",
+    "color_border": "#2A2A2A",
+    "color_text_on_dark": "#FFFFFF"
+  },
+  "wrappers": [{
+    "id": "groupBlock.v1",
+    "name": "Блок группы",
+    "supports_mixed_cards": true,
+    "layout": {
+      "type": "container",
+      "padding": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "decoration": {
+        "color": "#333333",
+        "borderRadius": 12
+      }
+    },
+    "header": {
+      "type": "container",
+      "padding": [
+        16,
+        16,
+        16,
+        16
+      ],
+      "decoration": {
+        "color": "#FFFFFF",
+        "borderRadiusTopLeft": 12,
+        "borderRadiusTopRight": 12
+      },
+      "fields": [
+        "title",
+        "subtitle",
+        "logo"
+      ]
+    },
+    "body": {
+      "type": "container",
+      "padding": [
+        12,
+        12,
+        12,
+        12
+      ]
+    }
+  }],
+  "render_rules": {
+    "block_type_to_wrapper": {
+      "groupBlock": "groupBlock.v1",
+      "flat": "none"
+    },
+    "card_template_field": "ui_template_id",
+    "allow_mixed_cards_in_same_group": true
+  },
+  "card_templates": {
+    "live_match": {
+      "type": "container",
+      "margin": [
+        0,
+        0,
+        0,
+        12
+      ],
+      "padding": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "decoration": {
+        "color": "#FFFFFF",
+        "borderRadius": 16.0,
+        "border": {
+          "color": "#E0E0E0",
+          "width": 1.0
+        }
+      },
+      "child": {
+        "type": "column",
+        "children": [{
+            "type": "text",
+            "data": "{{competition_name}}",
+            "textAlign": "left",
+            "style": {
+              "fontFamily": "Roboto",
+              "fontSize": 16.0,
+              "fontWeight": "w600",
+              "color": "#111111"
+            },
+            "maxLines": 1,
+            "overflow": "ellipsis",
+            "_visible_if": "{{competition_name}}"
+          },
+          {
+            "type": "sizedBox",
+            "height": 10.0,
+            "_visible_if": "{{competition_name}}"
+          },
+          {
+            "type": "text",
+            "data": "{{competition_subtitle}}",
+            "textAlign": "left",
+            "style": {
+              "fontFamily": "Roboto",
+              "fontSize": 11.0,
+              "fontWeight": "w400",
+              "color": "#777777"
+            },
+            "maxLines": 1,
+            "overflow": "ellipsis",
+            "_visible_if": "{{competition_name}}"
+          },
+          {
+            "type": "container",
+            "_visible_if": "{{competition_name}}",
+            "padding": [
+              0,
+              10,
+              0,
+              10
+            ],
+            "child": {
+              "type": "container",
+              "height": 1.0,
+              "decoration": {
+                "color": "#D0D0D0"
+              }
+            }
+          },
+          {
+            "type": "sizedBox",
+            "height": 0.0
+          },
+          {
+            "type": "sizedBox",
+            "height": 0.0
+          },
+          {
+            "type": "row",
+            "crossAxisAlignment": "start",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "stretch",
+                  "children": [{
+                      "type": "sizedBox",
+                      "height": 130.0,
+                      "child": {
+                        "type": "container",
+                        "decoration": {
+                          "color": "#F0F0F0",
+                          "borderRadius": 10.0
+                        },
+                        "padding": [
+                          8,
+                          10,
+                          8,
+                          10
+                        ],
+                        "child": {
+                          "type": "column",
+                          "crossAxisAlignment": "center",
+                          "mainAxisAlignment": "center",
+                          "children": [{
+                              "type": "center",
+                              "child": {
+                                "type": "sizedBox",
+                                "width": 48.0,
+                                "height": 48.0,
+                                "child": {
+                                  "type": "clipOval",
+                                  "clipBehavior": "antiAlias",
+                                  "child": {
+                                    "type": "image",
+                                    "src": "{{team_home_logo}}",
+                                    "imageType": "network",
+                                    "width": 48.0,
+                                    "height": 48.0,
+                                    "fit": "cover"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "sizedBox",
+                              "height": 8.0
+                            },
+                            {
+                              "type": "text",
+                              "data": "{{team_home_name}}",
+                              "textAlign": "center",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 13.0,
+                                "fontWeight": "w600",
+                                "color": "#111111"
+                              },
+                              "maxLines": 2,
+                              "overflow": "ellipsis"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 10.0,
+                      "_visible_if": "{{has_odds}}"
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 40.0,
+                      "_visible_if": "{{has_odds}}",
+                      "child": {
+                        "type": "container",
+                        "_visible_if": "{{has_odds}}",
+                        "decoration": {
+                          "color": "#EBF1FF",
+                          "borderRadius": 8.0
+                        },
+                        "constraints": {
+                          "minWidth": 9999
+                        },
+                        "child": {
+                          "type": "center",
+                          "child": {
+                            "type": "text",
+                            "data": "{{odds_home}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 14.0,
+                              "fontWeight": "w600",
+                              "color": "#1A3A6B"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 6.0
+              },
+              {
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "stretch",
+                  "children": [{
+                      "type": "sizedBox",
+                      "height": 130.0,
+                      "child": {
+                        "type": "column",
+                        "crossAxisAlignment": "center",
+                        "mainAxisAlignment": "center",
+                        "children": [{
+                            "type": "text",
+                            "data": "{{team_home_score}} : {{team_away_score}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 24.0,
+                              "fontWeight": "w700",
+                              "color": "#111111"
+                            },
+                            "maxLines": 1,
+                            "overflow": "ellipsis"
+                          },
+                          {
+                            "type": "sizedBox",
+                            "height": 10.0
+                          },
+                          {
+                            "type": "center",
+                            "child": {
+                              "type": "container",
+                              "padding": [
+                                14,
+                                5,
+                                14,
+                                5
+                              ],
+                              "decoration": {
+                                "color": "#FDECEA",
+                                "borderRadius": 999.0
+                              },
+                              "child": {
+                                "type": "text",
+                                "data": "{{match_time}}'",
+                                "textAlign": "center",
+                                "style": {
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12.0,
+                                  "fontWeight": "w700",
+                                  "color": "#C62828"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 10.0,
+                      "_visible_if": "{{has_odds}}"
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 40.0,
+                      "_visible_if": "{{has_odds}}",
+                      "child": {
+                        "type": "container",
+                        "_visible_if": "{{has_odds}}",
+                        "decoration": {
+                          "color": "#EBF1FF",
+                          "borderRadius": 8.0
+                        },
+                        "constraints": {
+                          "minWidth": 9999
+                        },
+                        "child": {
+                          "type": "center",
+                          "child": {
+                            "type": "text",
+                            "data": "{{odds_draw}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 14.0,
+                              "fontWeight": "w600",
+                              "color": "#1A3A6B"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 6.0
+              },
+              {
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "stretch",
+                  "children": [{
+                      "type": "sizedBox",
+                      "height": 130.0,
+                      "child": {
+                        "type": "container",
+                        "decoration": {
+                          "color": "#F0F0F0",
+                          "borderRadius": 10.0
+                        },
+                        "padding": [
+                          8,
+                          10,
+                          8,
+                          10
+                        ],
+                        "child": {
+                          "type": "column",
+                          "crossAxisAlignment": "center",
+                          "mainAxisAlignment": "center",
+                          "children": [{
+                              "type": "center",
+                              "child": {
+                                "type": "sizedBox",
+                                "width": 48.0,
+                                "height": 48.0,
+                                "child": {
+                                  "type": "clipOval",
+                                  "clipBehavior": "antiAlias",
+                                  "child": {
+                                    "type": "image",
+                                    "src": "{{team_away_logo}}",
+                                    "imageType": "network",
+                                    "width": 48.0,
+                                    "height": 48.0,
+                                    "fit": "cover"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "sizedBox",
+                              "height": 8.0
+                            },
+                            {
+                              "type": "text",
+                              "data": "{{team_away_name}}",
+                              "textAlign": "center",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 13.0,
+                                "fontWeight": "w600",
+                                "color": "#111111"
+                              },
+                              "maxLines": 2,
+                              "overflow": "ellipsis"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 10.0,
+                      "_visible_if": "{{has_odds}}"
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 40.0,
+                      "_visible_if": "{{has_odds}}",
+                      "child": {
+                        "type": "container",
+                        "_visible_if": "{{has_odds}}",
+                        "decoration": {
+                          "color": "#EBF1FF",
+                          "borderRadius": 8.0
+                        },
+                        "constraints": {
+                          "minWidth": 9999
+                        },
+                        "child": {
+                          "type": "center",
+                          "child": {
+                            "type": "text",
+                            "data": "{{odds_away}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 14.0,
+                              "fontWeight": "w600",
+                              "color": "#1A3A6B"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "upcoming_match": {
+      "type": "container",
+      "margin": [
+        0,
+        0,
+        0,
+        12
+      ],
+      "padding": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "decoration": {
+        "color": "#FFFFFF",
+        "borderRadius": 16.0,
+        "border": {
+          "color": "#E0E0E0",
+          "width": 1.0
+        }
+      },
+      "child": {
+        "type": "column",
+        "children": [{
+            "type": "text",
+            "data": "{{competition_name}}",
+            "textAlign": "left",
+            "style": {
+              "fontFamily": "Roboto",
+              "fontSize": 16.0,
+              "fontWeight": "w600",
+              "color": "#111111"
+            },
+            "maxLines": 1,
+            "overflow": "ellipsis",
+            "_visible_if": "{{competition_name}}"
+          },
+          {
+            "type": "sizedBox",
+            "height": 10.0,
+            "_visible_if": "{{competition_name}}"
+          },
+          {
+            "type": "text",
+            "data": "{{competition_subtitle}}",
+            "textAlign": "left",
+            "style": {
+              "fontFamily": "Roboto",
+              "fontSize": 11.0,
+              "fontWeight": "w400",
+              "color": "#777777"
+            },
+            "maxLines": 1,
+            "overflow": "ellipsis",
+            "_visible_if": "{{competition_name}}"
+          },
+          {
+            "type": "container",
+            "_visible_if": "{{competition_name}}",
+            "padding": [
+              0,
+              10,
+              0,
+              10
+            ],
+            "child": {
+              "type": "container",
+              "height": 1.0,
+              "decoration": {
+                "color": "#D0D0D0"
+              }
+            }
+          },
+          {
+            "type": "sizedBox",
+            "height": 0.0
+          },
+          {
+            "type": "sizedBox",
+            "height": 0.0
+          },
+          {
+            "type": "row",
+            "crossAxisAlignment": "start",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "stretch",
+                  "children": [{
+                      "type": "sizedBox",
+                      "height": 130.0,
+                      "child": {
+                        "type": "container",
+                        "decoration": {
+                          "color": "#F0F0F0",
+                          "borderRadius": 10.0
+                        },
+                        "padding": [
+                          8,
+                          10,
+                          8,
+                          10
+                        ],
+                        "child": {
+                          "type": "column",
+                          "crossAxisAlignment": "center",
+                          "mainAxisAlignment": "center",
+                          "children": [{
+                              "type": "center",
+                              "child": {
+                                "type": "sizedBox",
+                                "width": 48.0,
+                                "height": 48.0,
+                                "child": {
+                                  "type": "clipOval",
+                                  "clipBehavior": "antiAlias",
+                                  "child": {
+                                    "type": "image",
+                                    "src": "{{team_home_logo}}",
+                                    "imageType": "network",
+                                    "width": 48.0,
+                                    "height": 48.0,
+                                    "fit": "cover"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "sizedBox",
+                              "height": 8.0
+                            },
+                            {
+                              "type": "text",
+                              "data": "{{team_home_name}}",
+                              "textAlign": "center",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 13.0,
+                                "fontWeight": "w600",
+                                "color": "#111111"
+                              },
+                              "maxLines": 2,
+                              "overflow": "ellipsis"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 10.0,
+                      "_visible_if": "{{has_odds}}"
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 40.0,
+                      "_visible_if": "{{has_odds}}",
+                      "child": {
+                        "type": "container",
+                        "_visible_if": "{{has_odds}}",
+                        "decoration": {
+                          "color": "#EBF1FF",
+                          "borderRadius": 8.0
+                        },
+                        "constraints": {
+                          "minWidth": 9999
+                        },
+                        "child": {
+                          "type": "center",
+                          "child": {
+                            "type": "text",
+                            "data": "{{odds_home}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 14.0,
+                              "fontWeight": "w600",
+                              "color": "#1A3A6B"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 6.0
+              },
+              {
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "stretch",
+                  "children": [{
+                      "type": "sizedBox",
+                      "height": 130.0,
+                      "child": {
+                        "type": "column",
+                        "crossAxisAlignment": "center",
+                        "mainAxisAlignment": "center",
+                        "children": [{
+                            "type": "text",
+                            "data": "VS",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 24.0,
+                              "fontWeight": "w700",
+                              "color": "#111111"
+                            },
+                            "maxLines": 1,
+                            "overflow": "ellipsis"
+                          },
+                          {
+                            "type": "sizedBox",
+                            "height": 10.0
+                          },
+                          {
+                            "type": "center",
+                            "child": {
+                              "type": "container",
+                              "padding": [
+                                10,
+                                5,
+                                10,
+                                5
+                              ],
+                              "decoration": {
+                                "color": "#FFF3E0",
+                                "borderRadius": 999.0
+                              },
+                              "child": {
+                                "type": "text",
+                                "data": "{{kickoff_label}}",
+                                "textAlign": "center",
+                                "style": {
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 11.0,
+                                  "fontWeight": "w600",
+                                  "color": "#E65100"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 10.0,
+                      "_visible_if": "{{has_odds}}"
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 40.0,
+                      "_visible_if": "{{has_odds}}",
+                      "child": {
+                        "type": "container",
+                        "_visible_if": "{{has_odds}}",
+                        "decoration": {
+                          "color": "#EBF1FF",
+                          "borderRadius": 8.0
+                        },
+                        "constraints": {
+                          "minWidth": 9999
+                        },
+                        "child": {
+                          "type": "center",
+                          "child": {
+                            "type": "text",
+                            "data": "{{odds_draw}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 14.0,
+                              "fontWeight": "w600",
+                              "color": "#1A3A6B"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 6.0
+              },
+              {
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "stretch",
+                  "children": [{
+                      "type": "sizedBox",
+                      "height": 130.0,
+                      "child": {
+                        "type": "container",
+                        "decoration": {
+                          "color": "#F0F0F0",
+                          "borderRadius": 10.0
+                        },
+                        "padding": [
+                          8,
+                          10,
+                          8,
+                          10
+                        ],
+                        "child": {
+                          "type": "column",
+                          "crossAxisAlignment": "center",
+                          "mainAxisAlignment": "center",
+                          "children": [{
+                              "type": "center",
+                              "child": {
+                                "type": "sizedBox",
+                                "width": 48.0,
+                                "height": 48.0,
+                                "child": {
+                                  "type": "clipOval",
+                                  "clipBehavior": "antiAlias",
+                                  "child": {
+                                    "type": "image",
+                                    "src": "{{team_away_logo}}",
+                                    "imageType": "network",
+                                    "width": 48.0,
+                                    "height": 48.0,
+                                    "fit": "cover"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "sizedBox",
+                              "height": 8.0
+                            },
+                            {
+                              "type": "text",
+                              "data": "{{team_away_name}}",
+                              "textAlign": "center",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 13.0,
+                                "fontWeight": "w600",
+                                "color": "#111111"
+                              },
+                              "maxLines": 2,
+                              "overflow": "ellipsis"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 10.0,
+                      "_visible_if": "{{has_odds}}"
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 40.0,
+                      "_visible_if": "{{has_odds}}",
+                      "child": {
+                        "type": "container",
+                        "_visible_if": "{{has_odds}}",
+                        "decoration": {
+                          "color": "#EBF1FF",
+                          "borderRadius": 8.0
+                        },
+                        "constraints": {
+                          "minWidth": 9999
+                        },
+                        "child": {
+                          "type": "center",
+                          "child": {
+                            "type": "text",
+                            "data": "{{odds_away}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 14.0,
+                              "fontWeight": "w600",
+                              "color": "#1A3A6B"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "finished_match": {
+      "type": "container",
+      "margin": [
+        0,
+        0,
+        0,
+        12
+      ],
+      "padding": [
+        10,
+        10,
+        10,
+        10
+      ],
+      "decoration": {
+        "color": "#FFFFFF",
+        "borderRadius": 16.0,
+        "border": {
+          "color": "#E0E0E0",
+          "width": 1.0
+        }
+      },
+      "child": {
+        "type": "column",
+        "children": [{
+            "type": "text",
+            "data": "{{competition_name}}",
+            "textAlign": "left",
+            "style": {
+              "fontFamily": "Roboto",
+              "fontSize": 16.0,
+              "fontWeight": "w600",
+              "color": "#111111"
+            },
+            "maxLines": 1,
+            "overflow": "ellipsis",
+            "_visible_if": "{{competition_name}}"
+          },
+          {
+            "type": "sizedBox",
+            "height": 10.0,
+            "_visible_if": "{{competition_name}}"
+          },
+          {
+            "type": "text",
+            "data": "{{competition_subtitle}}",
+            "textAlign": "left",
+            "style": {
+              "fontFamily": "Roboto",
+              "fontSize": 11.0,
+              "fontWeight": "w400",
+              "color": "#777777"
+            },
+            "maxLines": 1,
+            "overflow": "ellipsis",
+            "_visible_if": "{{competition_name}}"
+          },
+          {
+            "type": "container",
+            "_visible_if": "{{competition_name}}",
+            "padding": [
+              0,
+              10,
+              0,
+              10
+            ],
+            "child": {
+              "type": "container",
+              "height": 1.0,
+              "decoration": {
+                "color": "#D0D0D0"
+              }
+            }
+          },
+          {
+            "type": "sizedBox",
+            "height": 0.0
+          },
+          {
+            "type": "sizedBox",
+            "height": 0.0
+          },
+          {
+            "type": "row",
+            "crossAxisAlignment": "start",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "stretch",
+                  "children": [{
+                      "type": "sizedBox",
+                      "height": 130.0,
+                      "child": {
+                        "type": "container",
+                        "decoration": {
+                          "color": "#F0F0F0",
+                          "borderRadius": 10.0
+                        },
+                        "padding": [
+                          8,
+                          10,
+                          8,
+                          10
+                        ],
+                        "child": {
+                          "type": "column",
+                          "crossAxisAlignment": "center",
+                          "mainAxisAlignment": "center",
+                          "children": [{
+                              "type": "center",
+                              "child": {
+                                "type": "sizedBox",
+                                "width": 48.0,
+                                "height": 48.0,
+                                "child": {
+                                  "type": "clipOval",
+                                  "clipBehavior": "antiAlias",
+                                  "child": {
+                                    "type": "image",
+                                    "src": "{{team_home_logo}}",
+                                    "imageType": "network",
+                                    "width": 48.0,
+                                    "height": 48.0,
+                                    "fit": "cover"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "sizedBox",
+                              "height": 8.0
+                            },
+                            {
+                              "type": "text",
+                              "data": "{{team_home_name}}",
+                              "textAlign": "center",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 13.0,
+                                "fontWeight": "w600",
+                                "color": "#111111"
+                              },
+                              "maxLines": 2,
+                              "overflow": "ellipsis"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 10.0,
+                      "_visible_if": "{{has_odds}}"
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 40.0,
+                      "_visible_if": "{{has_odds}}",
+                      "child": {
+                        "type": "container",
+                        "_visible_if": "{{has_odds}}",
+                        "decoration": {
+                          "color": "#EBF1FF",
+                          "borderRadius": 8.0
+                        },
+                        "constraints": {
+                          "minWidth": 9999
+                        },
+                        "child": {
+                          "type": "center",
+                          "child": {
+                            "type": "text",
+                            "data": "{{odds_home}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 14.0,
+                              "fontWeight": "w600",
+                              "color": "#1A3A6B"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 6.0
+              },
+              {
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "stretch",
+                  "children": [{
+                      "type": "sizedBox",
+                      "height": 130.0,
+                      "child": {
+                        "type": "column",
+                        "crossAxisAlignment": "center",
+                        "mainAxisAlignment": "center",
+                        "children": [{
+                            "type": "text",
+                            "data": "{{team_home_score}} : {{team_away_score}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 24.0,
+                              "fontWeight": "w700",
+                              "color": "#111111"
+                            },
+                            "maxLines": 1,
+                            "overflow": "ellipsis"
+                          },
+                          {
+                            "type": "sizedBox",
+                            "height": 10.0
+                          },
+                          {
+                            "type": "center",
+                            "child": {
+                              "type": "container",
+                              "padding": [
+                                14,
+                                5,
+                                14,
+                                5
+                              ],
+                              "decoration": {
+                                "color": "#EEEEEE",
+                                "borderRadius": 999.0
+                              },
+                              "child": {
+                                "type": "text",
+                                "data": "FT",
+                                "textAlign": "center",
+                                "style": {
+                                  "fontFamily": "Roboto",
+                                  "fontSize": 12.0,
+                                  "fontWeight": "w600",
+                                  "color": "#888888"
+                                }
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 10.0,
+                      "_visible_if": "{{has_odds}}"
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 40.0,
+                      "_visible_if": "{{has_odds}}"
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 6.0
+              },
+              {
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "column",
+                  "crossAxisAlignment": "stretch",
+                  "children": [{
+                      "type": "sizedBox",
+                      "height": 130.0,
+                      "child": {
+                        "type": "container",
+                        "decoration": {
+                          "color": "#F0F0F0",
+                          "borderRadius": 10.0
+                        },
+                        "padding": [
+                          8,
+                          10,
+                          8,
+                          10
+                        ],
+                        "child": {
+                          "type": "column",
+                          "crossAxisAlignment": "center",
+                          "mainAxisAlignment": "center",
+                          "children": [{
+                              "type": "center",
+                              "child": {
+                                "type": "sizedBox",
+                                "width": 48.0,
+                                "height": 48.0,
+                                "child": {
+                                  "type": "clipOval",
+                                  "clipBehavior": "antiAlias",
+                                  "child": {
+                                    "type": "image",
+                                    "src": "{{team_away_logo}}",
+                                    "imageType": "network",
+                                    "width": 48.0,
+                                    "height": 48.0,
+                                    "fit": "cover"
+                                  }
+                                }
+                              }
+                            },
+                            {
+                              "type": "sizedBox",
+                              "height": 8.0
+                            },
+                            {
+                              "type": "text",
+                              "data": "{{team_away_name}}",
+                              "textAlign": "center",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 13.0,
+                                "fontWeight": "w600",
+                                "color": "#111111"
+                              },
+                              "maxLines": 2,
+                              "overflow": "ellipsis"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 10.0,
+                      "_visible_if": "{{has_odds}}"
+                    },
+                    {
+                      "type": "sizedBox",
+                      "height": 40.0,
+                      "_visible_if": "{{has_odds}}",
+                      "child": {
+                        "type": "container",
+                        "_visible_if": "{{has_odds}}",
+                        "decoration": {
+                          "color": "#EBF1FF",
+                          "borderRadius": 8.0
+                        },
+                        "constraints": {
+                          "minWidth": 9999
+                        },
+                        "child": {
+                          "type": "center",
+                          "child": {
+                            "type": "text",
+                            "data": "{{odds_away}}",
+                            "textAlign": "center",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 14.0,
+                              "fontWeight": "w600",
+                              "color": "#1A3A6B"
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "simple_live_match": {
+      "type": "container",
+      "margin": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "padding": [
+        16,
+        14,
+        16,
+        14
+      ],
+      "decoration": {
+        "color": "#FFFFFF",
+        "borderRadius": 16.0,
+        "border": {
+          "color": "#E0E0E0",
+          "width": 1.0
+        }
+      },
+      "child": {
+        "type": "column",
+        "crossAxisAlignment": "stretch",
+        "children": [{
+            "type": "row",
+            "mainAxisAlignment": "spaceBetween",
+            "crossAxisAlignment": "center",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "row",
+                  "crossAxisAlignment": "center",
+                  "children": [{
+                      "type": "sizedBox",
+                      "width": 40.0,
+                      "height": 40.0,
+                      "child": {
+                        "type": "clipOval",
+                        "clipBehavior": "antiAlias",
+                        "child": {
+                          "type": "image",
+                          "src": "{{team_home_logo}}",
+                          "imageType": "network",
+                          "width": 40.0,
+                          "height": 40.0,
+                          "fit": "cover"
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "width": 12.0
+                    },
+                    {
+                      "type": "flexible",
+                      "fit": "tight",
+                      "flex": 1,
+                      "child": {
+                        "type": "text",
+                        "data": "{{team_home_name}}",
+                        "textAlign": "left",
+                        "maxLines": 1,
+                        "overflow": "ellipsis",
+                        "style": {
+                          "fontFamily": "Roboto",
+                          "fontSize": 15.0,
+                          "fontWeight": "w600",
+                          "color": "#111111"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 8.0
+              },
+              {
+                "type": "text",
+                "data": "{{team_home_score}}",
+                "_visible_if": "{{has_score}}",
+                "style": {
+                  "fontFamily": "Roboto",
+                  "fontSize": 16.0,
+                  "fontWeight": "w700",
+                  "color": "#111111"
+                }
+              }
+            ]
+          },
+          {
+            "type": "sizedBox",
+            "height": 12.0
+          },
+          {
+            "type": "row",
+            "crossAxisAlignment": "center",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "container",
+                  "height": 1.0,
+                  "decoration": {
+                    "color": "#DDDDDD"
+                  }
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 10.0
+              },
+              {
+                "type": "container",
+                "padding": [
+                  10,
+                  4,
+                  10,
+                  4
+                ],
+                "decoration": {
+                  "color": "#FDECEA",
+                  "borderRadius": 999.0
+                },
+                "child": {
+                  "type": "text",
+                  "data": "{{match_time}}'",
+                  "textAlign": "center",
+                  "style": {
+                    "fontFamily": "Roboto",
+                    "fontSize": 11.0,
+                    "fontWeight": "w700",
+                    "color": "#C62828"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "sizedBox",
+            "height": 12.0
+          },
+          {
+            "type": "row",
+            "mainAxisAlignment": "spaceBetween",
+            "crossAxisAlignment": "center",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "row",
+                  "crossAxisAlignment": "center",
+                  "children": [{
+                      "type": "sizedBox",
+                      "width": 40.0,
+                      "height": 40.0,
+                      "child": {
+                        "type": "clipOval",
+                        "clipBehavior": "antiAlias",
+                        "child": {
+                          "type": "image",
+                          "src": "{{team_away_logo}}",
+                          "imageType": "network",
+                          "width": 40.0,
+                          "height": 40.0,
+                          "fit": "cover"
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "width": 12.0
+                    },
+                    {
+                      "type": "flexible",
+                      "fit": "tight",
+                      "flex": 1,
+                      "child": {
+                        "type": "text",
+                        "data": "{{team_away_name}}",
+                        "textAlign": "left",
+                        "maxLines": 1,
+                        "overflow": "ellipsis",
+                        "style": {
+                          "fontFamily": "Roboto",
+                          "fontSize": 15.0,
+                          "fontWeight": "w600",
+                          "color": "#111111"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 8.0
+              },
+              {
+                "type": "text",
+                "data": "{{team_away_score}}",
+                "_visible_if": "{{has_score}}",
+                "style": {
+                  "fontFamily": "Roboto",
+                  "fontSize": 16.0,
+                  "fontWeight": "w700",
+                  "color": "#111111"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "simple_finished_match": {
+      "type": "container",
+      "margin": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "padding": [
+        16,
+        14,
+        16,
+        14
+      ],
+      "decoration": {
+        "color": "#FFFFFF",
+        "borderRadius": 16.0,
+        "border": {
+          "color": "#E0E0E0",
+          "width": 1.0
+        }
+      },
+      "child": {
+        "type": "column",
+        "crossAxisAlignment": "stretch",
+        "children": [{
+            "type": "row",
+            "mainAxisAlignment": "spaceBetween",
+            "crossAxisAlignment": "center",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "row",
+                  "crossAxisAlignment": "center",
+                  "children": [{
+                      "type": "sizedBox",
+                      "width": 40.0,
+                      "height": 40.0,
+                      "child": {
+                        "type": "clipOval",
+                        "clipBehavior": "antiAlias",
+                        "child": {
+                          "type": "image",
+                          "src": "{{team_home_logo}}",
+                          "imageType": "network",
+                          "width": 40.0,
+                          "height": 40.0,
+                          "fit": "cover"
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "width": 12.0
+                    },
+                    {
+                      "type": "flexible",
+                      "fit": "tight",
+                      "flex": 1,
+                      "child": {
+                        "type": "text",
+                        "data": "{{team_home_name}}",
+                        "textAlign": "left",
+                        "maxLines": 1,
+                        "overflow": "ellipsis",
+                        "style": {
+                          "fontFamily": "Roboto",
+                          "fontSize": 15.0,
+                          "fontWeight": "w600",
+                          "color": "#111111"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 8.0
+              },
+              {
+                "type": "text",
+                "data": "{{team_home_score}}",
+                "_visible_if": "{{has_score}}",
+                "style": {
+                  "fontFamily": "Roboto",
+                  "fontSize": 16.0,
+                  "fontWeight": "w700",
+                  "color": "#111111"
+                }
+              }
+            ]
+          },
+          {
+            "type": "sizedBox",
+            "height": 12.0
+          },
+          {
+            "type": "row",
+            "crossAxisAlignment": "center",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "container",
+                  "height": 1.0,
+                  "decoration": {
+                    "color": "#DDDDDD"
+                  }
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 10.0
+              },
+              {
+                "type": "text",
+                "data": "FT",
+                "textAlign": "center",
+                "style": {
+                  "fontFamily": "Roboto",
+                  "fontSize": 11.0,
+                  "fontWeight": "w600",
+                  "color": "#6E6E6E"
+                }
+              }
+            ]
+          },
+          {
+            "type": "sizedBox",
+            "height": 12.0
+          },
+          {
+            "type": "row",
+            "mainAxisAlignment": "spaceBetween",
+            "crossAxisAlignment": "center",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "row",
+                  "crossAxisAlignment": "center",
+                  "children": [{
+                      "type": "sizedBox",
+                      "width": 40.0,
+                      "height": 40.0,
+                      "child": {
+                        "type": "clipOval",
+                        "clipBehavior": "antiAlias",
+                        "child": {
+                          "type": "image",
+                          "src": "{{team_away_logo}}",
+                          "imageType": "network",
+                          "width": 40.0,
+                          "height": 40.0,
+                          "fit": "cover"
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "width": 12.0
+                    },
+                    {
+                      "type": "flexible",
+                      "fit": "tight",
+                      "flex": 1,
+                      "child": {
+                        "type": "text",
+                        "data": "{{team_away_name}}",
+                        "textAlign": "left",
+                        "maxLines": 1,
+                        "overflow": "ellipsis",
+                        "style": {
+                          "fontFamily": "Roboto",
+                          "fontSize": 15.0,
+                          "fontWeight": "w600",
+                          "color": "#111111"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 8.0
+              },
+              {
+                "type": "text",
+                "data": "{{team_away_score}}",
+                "_visible_if": "{{has_score}}",
+                "style": {
+                  "fontFamily": "Roboto",
+                  "fontSize": 16.0,
+                  "fontWeight": "w700",
+                  "color": "#111111"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "simple_upcoming_match": {
+      "type": "container",
+      "margin": [
+        0,
+        0,
+        0,
+        10
+      ],
+      "padding": [
+        16,
+        14,
+        16,
+        14
+      ],
+      "decoration": {
+        "color": "#FFFFFF",
+        "borderRadius": 16.0,
+        "border": {
+          "color": "#E0E0E0",
+          "width": 1.0
+        }
+      },
+      "child": {
+        "type": "column",
+        "crossAxisAlignment": "stretch",
+        "children": [{
+            "type": "row",
+            "mainAxisAlignment": "spaceBetween",
+            "crossAxisAlignment": "center",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "row",
+                  "crossAxisAlignment": "center",
+                  "children": [{
+                      "type": "sizedBox",
+                      "width": 40.0,
+                      "height": 40.0,
+                      "child": {
+                        "type": "clipOval",
+                        "clipBehavior": "antiAlias",
+                        "child": {
+                          "type": "image",
+                          "src": "{{team_home_logo}}",
+                          "imageType": "network",
+                          "width": 40.0,
+                          "height": 40.0,
+                          "fit": "cover"
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "width": 12.0
+                    },
+                    {
+                      "type": "flexible",
+                      "fit": "tight",
+                      "flex": 1,
+                      "child": {
+                        "type": "text",
+                        "data": "{{team_home_name}}",
+                        "textAlign": "left",
+                        "maxLines": 1,
+                        "overflow": "ellipsis",
+                        "style": {
+                          "fontFamily": "Roboto",
+                          "fontSize": 15.0,
+                          "fontWeight": "w600",
+                          "color": "#111111"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 8.0
+              },
+              {
+                "type": "text",
+                "data": "{{team_home_score}}",
+                "_visible_if": "{{has_score}}",
+                "style": {
+                  "fontFamily": "Roboto",
+                  "fontSize": 16.0,
+                  "fontWeight": "w700",
+                  "color": "#111111"
+                }
+              }
+            ]
+          },
+          {
+            "type": "sizedBox",
+            "height": 12.0
+          },
+          {
+            "type": "row",
+            "crossAxisAlignment": "center",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "container",
+                  "height": 1.0,
+                  "decoration": {
+                    "color": "#DDDDDD"
+                  }
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 10.0
+              },
+              {
+                "type": "container",
+                "padding": [
+                  10,
+                  4,
+                  10,
+                  4
+                ],
+                "decoration": {
+                  "color": "#FFF3E0",
+                  "borderRadius": 999.0
+                },
+                "child": {
+                  "type": "text",
+                  "data": "{{kickoff_label}}",
+                  "textAlign": "center",
+                  "style": {
+                    "fontFamily": "Roboto",
+                    "fontSize": 11.0,
+                    "fontWeight": "w700",
+                    "color": "#E65100"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "type": "sizedBox",
+            "height": 12.0
+          },
+          {
+            "type": "row",
+            "mainAxisAlignment": "spaceBetween",
+            "crossAxisAlignment": "center",
+            "children": [{
+                "type": "flexible",
+                "fit": "tight",
+                "flex": 1,
+                "child": {
+                  "type": "row",
+                  "crossAxisAlignment": "center",
+                  "children": [{
+                      "type": "sizedBox",
+                      "width": 40.0,
+                      "height": 40.0,
+                      "child": {
+                        "type": "clipOval",
+                        "clipBehavior": "antiAlias",
+                        "child": {
+                          "type": "image",
+                          "src": "{{team_away_logo}}",
+                          "imageType": "network",
+                          "width": 40.0,
+                          "height": 40.0,
+                          "fit": "cover"
+                        }
+                      }
+                    },
+                    {
+                      "type": "sizedBox",
+                      "width": 12.0
+                    },
+                    {
+                      "type": "flexible",
+                      "fit": "tight",
+                      "flex": 1,
+                      "child": {
+                        "type": "text",
+                        "data": "{{team_away_name}}",
+                        "textAlign": "left",
+                        "maxLines": 1,
+                        "overflow": "ellipsis",
+                        "style": {
+                          "fontFamily": "Roboto",
+                          "fontSize": 15.0,
+                          "fontWeight": "w600",
+                          "color": "#111111"
+                        }
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "type": "sizedBox",
+                "width": 8.0
+              },
+              {
+                "type": "text",
+                "data": "{{team_away_score}}",
+                "_visible_if": "{{has_score}}",
+                "style": {
+                  "fontFamily": "Roboto",
+                  "fontSize": 16.0,
+                  "fontWeight": "w700",
+                  "color": "#111111"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "skeleton": {
+    "item_count": 3,
+    "fill_color_light": "#ECECEC",
+    "fill_color_dark": "#313131",
+    "card_color_light": "#FFFFFF",
+    "card_color_dark": "#222222",
+    "card_border_color_light": "#E0E0E0",
+    "card_border_color_dark": "#2A2A2A",
+    "card_border_radius": 14,
+    "card_padding": 12,
+    "card_margin_bottom": 12,
+    "line_radius": 4,
+    "competition_line_height": 14,
+    "competition_width_ratio": 0.55,
+    "subtitle_line_height": 11,
+    "subtitle_width_ratio": 0.38,
+    "team_logo_size": 44,
+    "team_name_height": 12,
+    "team_name_width_ratio": 0.28,
+    "score_block_width": 52,
+    "score_block_height": 32,
+    "odds_height": 30,
+    "odds_width_ratio": 0.27,
+    "menu_first_level_count": 5,
+    "menu_first_level_height": 90,
+    "menu_icon_size": 44,
+    "menu_icon_label_height": 11,
+    "menu_icon_spacing": 32,
+    "menu_second_level_pill_count": 4,
+    "menu_pill_height": 34,
+    "menu_pill_width": 64,
+    "menu_pill_border_radius": 999,
+    "menu_pill_spacing": 8
+  }
+}

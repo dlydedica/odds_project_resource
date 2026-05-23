@@ -1,0 +1,8 @@
+   {
+       "menuItems": [{
+           "icon": "privacy_tip",
+           "title": "Политика безопасности",
+           "url": "https://www.example.com/privacy-policy",
+           "isExternal": true
+       }]
+   }

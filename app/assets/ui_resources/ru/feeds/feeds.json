@@ -1,0 +1,154 @@
+{
+    "feeds": [{
+            "feed_id": "news-rss-main",
+            "feed_type": "rss",
+            "scope": "news",
+            "settings": {
+                "cache": {
+                    "namespace": "rss:news",
+                    "ttl_sec": 300
+                },
+                "delivery": "redirect",
+                "polling": {
+                    "enabled": false
+                }
+            },
+            "endpoints": [{
+                    "feed_key": "football",
+                    "title": "Футбол",
+                    "endpoint": "https://www.sport.ru/rssfeeds/football.rss"
+                },
+                {
+                    "feed_key": "hockey",
+                    "title": "Хоккей",
+                    "endpoint": "https://www.sport.ru/rssfeeds/hockey.rss"
+                },
+                {
+                    "feed_key": "basketball",
+                    "title": "Баскетбол",
+                    "endpoint": "https://www.sport.ru/rssfeeds/basketball.rss"
+                },
+                {
+                    "feed_key": "tennis",
+                    "title": "Теннис",
+                    "endpoint": "https://www.sport.ru/rssfeeds/tennis.rss"
+                },
+                {
+                    "feed_key": "formula1",
+                    "title": "Формула 1",
+                    "endpoint": "https://www.sport.ru/rssfeeds/formula1.rss"
+                },
+                {
+                    "feed_key": "autosport",
+                    "title": "Автоспорт",
+                    "endpoint": "https://www.sport.ru/rssfeeds/autosport.rss"
+                },
+                {
+                    "feed_key": "boxing",
+                    "title": "Бокс",
+                    "endpoint": "https://www.sport.ru/rssfeeds/boxing.rss"
+                },
+                {
+                    "feed_key": "winter",
+                    "title": "Зимние виды",
+                    "endpoint": "https://www.sport.ru/rssfeeds/winter.rss"
+                },
+                {
+                    "feed_key": "voleybol",
+                    "title": "Волейбол",
+                    "endpoint": "https://www.sport.ru/rssfeeds/voleybol.rss"
+                },
+                {
+                    "feed_key": "gandbol",
+                    "title": "Гандбол",
+                    "endpoint": "https://www.sport.ru/rssfeeds/gandbol.rss"
+                },
+                {
+                    "feed_key": "biatlon",
+                    "title": "Биатлон",
+                    "endpoint": "https://www.sport.ru/rssfeeds/biatlon.rss"
+                }
+            ]
+        },
+        {
+            "feed_id": "matches-main",
+            "feed_key": "matches",
+            "feed_type": "openapi",
+            "title": "Матчи",
+            "scope": "events",
+            "api_url": "https://parser.pcom1.ru",
+            "api_version": "v4",
+            "settings": {
+                "quickstart": {
+                    "endpoint": "/v4/events?sports=all&per_sport_limit=10&limit=100&lang=ru"
+                },
+                "page": {
+                    "endpoint": "/v4/events?sports={sports}&cursor={cursor}&limit=100&lang=ru"
+                },
+                "polling": {
+                    "endpoint": "/v4/events/polling?last_revision={revision}&limit=100&lang=ru"
+                },
+                "cache": {
+                    "namespace": "events",
+                    "ttl_sec": 86400,
+                    "revision_key": "meta.revision"
+                }
+            },
+            "api": {
+                "list": "/v4/events",
+                "polling": "/v4/events/polling",
+                "id": "/v4/events/{id}"
+            },
+            "mapping": {
+                "event_uid": "id",
+                "sport.key": "sport_key",
+                "sport.name": "sport_title",
+                "competition.key": "league_key",
+                "competition.name": "competition_name",
+                "country.name": "competition_subtitle",
+                "competition.logo_url": "competition_logo",
+                "participants.home.name": "team_home_name",
+                "participants.home.logo_url": "team_home_logo",
+                "participants.away.name": "team_away_name",
+                "participants.away.logo_url": "team_away_logo",
+                "score.home": "team_home_score",
+                "score.away": "team_away_score",
+                "period.time": "match_time",
+                "start_time_utc": "kickoff_at",
+                "status": "status",
+                "markets.0.odds.home": "odds_home",
+                "markets.0.odds.draw": "odds_draw",
+                "markets.0.odds.away": "odds_away",
+                "markets.0.selections.0.c": "has_odds",
+                "meta.ui.block_type": "block_type"
+            }
+        },
+        {
+            "feed_id": "offers-main",
+            "feed_key": "offers",
+            "token_type": "Bearer",
+            "feed_type": "openapi",
+            "title": "Офферы",
+            "scope": "offers",
+            "api_url": "https://pcom1.ru",
+            "api_version": "v1",
+            "settings": {
+                "liquickstartst": {
+                    "endpoint": "/odds/v1/mobile/offers"
+                },
+                "polling": {
+                    "endpoint": "/odds/v1/mobile/offers/poll"
+                },
+                "cache": {
+                    "namespace": "offers",
+                    "ttl_sec": 86400
+                }
+            },
+            "api": {
+                "list": "/odds/v1/mobile/offers",
+                "polling": "/odds/v1/mobile/offers/poll",
+                "id": "/odds/v1/mobile/offers/{id}"
+            }
+        }
+    ]
+}

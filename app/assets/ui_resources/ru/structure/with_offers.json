@@ -1,0 +1,47 @@
+{
+    "type": "appShell",
+    "tabs": [
+      {
+        "icon": "home",
+        "title": "Главная",
+        "screen": {
+          "type": "home",
+          "section_path": "home",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.home.routing_contract"
+        }
+      },
+      {
+        "icon": "sports_soccer",
+        "title": "Матчи",
+        "screen": {
+          "type": "matches",
+          "section_path": "matches",
+          "feed_id": "matches-main",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.matches.routing_contract"
+        }
+      },
+      {
+        "icon": "storefront",
+        "title": "Офферы",
+        "screen": {
+          "type": "offers",
+          "section_path": "offers",
+          "feed_id": "offers-main",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.offers.routing_contract"
+        }
+      },
+      {
+        "icon": "article",
+        "title": "Новости",
+        "screen": {
+          "type": "news",
+          "section_path": "news",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.news.routing_contract"
+        }
+      }
+    ]
+  }

@@ -1,0 +1,37 @@
+
+  {
+    "type": "appShell",
+    "tabs": [
+      {
+        "icon": "home",
+        "title": "Inicio",
+        "screen": {
+          "type": "home",
+          "section_path": "home",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.home.routing_contract"
+        }
+      },
+      {
+        "icon": "sports_soccer",
+        "title": "Partidos",
+        "screen": {
+          "type": "matches",
+          "section_path": "matches",
+          "feed_id": "matches-main",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.matches.routing_contract"
+        }
+      },
+      {
+        "icon": "article",
+        "title": "Noticias",
+        "screen": {
+          "type": "news",
+          "section_path": "news",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.news.routing_contract"
+        }
+      }
+    ]
+  }
