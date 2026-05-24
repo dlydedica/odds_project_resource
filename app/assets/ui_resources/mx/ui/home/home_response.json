@@ -464,7 +464,6 @@
                   },
                   {
                     "type": "inAppLinkContainer",
-                    "event_card_marker": "home_event_card_2",
                     "link": "app://inApp?tabBarId=matches&topMenuId=football",
                     "child": {
                       "type": "container",
@@ -747,6 +746,7 @@
                   },
                   {
                     "type": "inAppLinkContainer",
+                    "event_card_marker": "home_event_card_2",
                     "link": "app://inApp?tabBarId=matches&topMenuId=hockey&subMenuId=nhl&itemId=hn-007",
                     "child": {
                       "type": "container",
