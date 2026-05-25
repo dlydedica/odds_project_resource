@@ -1,0 +1,24 @@
+{
+  "live": {
+    "badge_text": "LIVE",
+    "badge_color": "#F52F3B",
+    "badge_text_color": "#FFFFFF",
+    "score_color": "#F52F3B",
+    "border_color": "#F52F3B"
+  },
+  "prematch": {
+    "badge_text": "PREMATCH",
+    "badge_color": "#ECECEC",
+    "badge_text_color": "#4A4A4A",
+    "score_color": "#141414",
+    "border_color": "#ECECEC"
+  },
+  "finished": {
+    "badge_text": "",
+    "badge_color": "#E2E8F0",
+    "badge_text_color": "#334155",
+    "score_color": "#F52F3B",
+    "border_color": "#B0B0B0"
+  }
+}
+

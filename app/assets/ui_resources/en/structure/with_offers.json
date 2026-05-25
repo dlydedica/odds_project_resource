@@ -1,0 +1,47 @@
+{
+    "type": "appShell",
+    "tabs": [
+      {
+        "icon": "home",
+        "title": "Home",
+        "screen": {
+          "type": "home",
+          "section_path": "home",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.home.routing_contract"
+        }
+      },
+      {
+        "icon": "sports_soccer",
+        "title": "Matches",
+        "screen": {
+          "type": "matches",
+          "section_path": "matches",
+          "feed_id": "matches-main",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.matches.routing_contract"
+        }
+      },
+      {
+        "icon": "storefront",
+        "title": "Offers",
+        "screen": {
+          "type": "offers",
+          "section_path": "offers",
+          "feed_id": "offers-main",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.offers.routing_contract"
+        }
+      },
+      {
+        "icon": "article",
+        "title": "News",
+        "screen": {
+          "type": "news",
+          "section_path": "news",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.news.routing_contract"
+        }
+      }
+    ]
+  }
