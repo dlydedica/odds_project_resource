@@ -358,6 +358,7 @@
                 "children": [
                   {
                     "type": "inAppLinkContainer",
+                    "event_card_marker": "home_event_card_1",
                     "link": "app://inApp?tabBarId=matches&topMenuId=football&subMenuId=epl&itemId=fe-notitle-001",
                     "child": {
                       "type": "container",
@@ -762,6 +763,7 @@
                   },
                   {
                     "type": "inAppLinkContainer",
+                    "event_card_marker": "home_event_card_2",
                     "link": "app://inApp?tabBarId=matches&topMenuId=hockey&subMenuId=nhl&itemId=hn-007",
                     "child": {
                       "type": "container",
