@@ -38,7 +38,7 @@
         "height": 14
       },
       {
-        "type": "sizedBox",
+        "type": "homeHeroCarousel",
         "height": 196,
         "viewportFraction": 1.0,
         "padEnds": false,
