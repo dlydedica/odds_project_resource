@@ -128,16 +128,16 @@
             "feed_key": "offers",
             "token_type": "Bearer",
             "feed_type": "openapi",
-            "title": "Офферы",
+            "title": "Offers",
             "scope": "offers",
             "api_url": "https://pcom1.ru",
             "api_version": "v1",
             "settings": {
                 "liquickstartst": {
-                    "endpoint": "/odds/v1/mobile/offers"
+                    "endpoint": "/odds/v2/mobile/offers"
                 },
                 "polling": {
-                    "endpoint": "/odds/v1/mobile/offers/poll"
+                    "endpoint": "/odds/v2/mobile/offers/poll"
                 },
                 "cache": {
                     "namespace": "offers",
@@ -145,9 +145,9 @@
                 }
             },
             "api": {
-                "list": "/odds/v1/mobile/offers",
-                "polling": "/odds/v1/mobile/offers/poll",
-                "id": "/odds/v1/mobile/offers/{id}"
+                "list": "/odds/v2/mobile/offers",
+                "polling": "/odds/v2/mobile/offers/poll",
+                "id": "/odds/v2/mobile/offers/{id}"
             }
         }
     ]
