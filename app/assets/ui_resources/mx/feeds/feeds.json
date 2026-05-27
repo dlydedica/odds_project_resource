@@ -76,6 +76,7 @@
             "feed_type": "matches_promo",
             "title": "Matches Promo",
             "scope": "matches",
+            
             "card_url": "https://example.com/ref/test-match-card",
             "image_url": "https://dummyimage.com/240x120/f52f3b/ffffff.png&text=Promo"
         },
