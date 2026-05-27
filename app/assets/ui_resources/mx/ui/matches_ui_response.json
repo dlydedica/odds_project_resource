@@ -8,6 +8,8 @@
     "mapper": "matches.v1",
     "required": true
   },
+  "promo_card_url_field": "promo_card_url",
+  "promo_card_image_url_field": "promo_card_image_url",
   "routing_contract": {
     "version": "1.0.0",
     "section_id": "matches",
@@ -350,6 +352,26 @@
                           {
                             "type": "sizedBox",
                             "height": 10.0
+                          },
+                          {
+                            "type": "center",
+                            "_visible_if": "{{promo_card_image_url}}",
+                            "child": {
+                              "type": "sizedBox",
+                              "width": 72.0,
+                              "height": 40.0,
+                              "child": {
+                                "type": "image",
+                                "src": "{{promo_card_image_url}}",
+                                "imageType": "network",
+                                "fit": "contain"
+                              }
+                            }
+                          },
+                          {
+                            "type": "sizedBox",
+                            "height": 10.0,
+                            "_visible_if": "{{promo_card_image_url}}"
                           },
                           {
                             "type": "center",
@@ -760,6 +782,26 @@
                           },
                           {
                             "type": "center",
+                            "_visible_if": "{{promo_card_image_url}}",
+                            "child": {
+                              "type": "sizedBox",
+                              "width": 72.0,
+                              "height": 40.0,
+                              "child": {
+                                "type": "image",
+                                "src": "{{promo_card_image_url}}",
+                                "imageType": "network",
+                                "fit": "contain"
+                              }
+                            }
+                          },
+                          {
+                            "type": "sizedBox",
+                            "height": 10.0,
+                            "_visible_if": "{{promo_card_image_url}}"
+                          },
+                          {
+                            "type": "center",
                             "child": {
                               "type": "container",
                               "padding": [
@@ -1164,6 +1206,26 @@
                           {
                             "type": "sizedBox",
                             "height": 10.0
+                          },
+                          {
+                            "type": "center",
+                            "_visible_if": "{{promo_card_image_url}}",
+                            "child": {
+                              "type": "sizedBox",
+                              "width": 72.0,
+                              "height": 40.0,
+                              "child": {
+                                "type": "image",
+                                "src": "{{promo_card_image_url}}",
+                                "imageType": "network",
+                                "fit": "contain"
+                              }
+                            }
+                          },
+                          {
+                            "type": "sizedBox",
+                            "height": 10.0,
+                            "_visible_if": "{{promo_card_image_url}}"
                           },
                           {
                             "type": "center",
