@@ -367,6 +367,7 @@
                           {
                             "type": "text",
                             "data": "Premier League",
+                            "maxLines": 1,
                             "style": {
                               "fontFamily": "Roboto",
                               "fontSize": 12,
@@ -773,6 +774,7 @@
                           {
                             "type": "text",
                             "data": "Liga de Campeones",
+                            "maxLines": 1,
                             "style": {
                               "fontFamily": "Roboto",
                               "fontSize": 12,
