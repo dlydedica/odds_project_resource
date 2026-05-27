@@ -136,16 +136,16 @@
             "feed_key": "offers",
             "token_type": "Bearer",
             "feed_type": "openapi",
-            "title": "Офферы",
+            "title": "Offers",
             "scope": "offers",
-            "api_url": "https://pcom1.ru",
-            "api_version": "v1",
+            "api_url": "https://line-game.name/odds",
+            "api_version": "v2",
             "settings": {
                 "quickstart": {
-                    "endpoint": "/odds/v1/mobile/offers"
+                    "endpoint": "/v2/mobile/offers"
                 },
                 "polling": {
-                    "endpoint": "/odds/v1/mobile/offers/poll"
+                    "endpoint": "/v2/mobile/offers/poll"
                 },
                 "cache": {
                     "namespace": "offers",
@@ -153,9 +153,9 @@
                 }
             },
             "api": {
-                "list": "/odds/v1/mobile/offers",
-                "polling": "/odds/v1/mobile/offers/poll",
-                "id": "/odds/v1/mobile/offers/{id}"
+                "list": "/v2/mobile/offers",
+                "polling": "/v2/mobile/offers/poll",
+                "id": "/v2/mobile/offers/{id}"
             }
         }
     ]
