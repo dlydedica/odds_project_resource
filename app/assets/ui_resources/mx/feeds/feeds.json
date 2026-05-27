@@ -156,7 +156,7 @@
             "feed_type": "openapi",
             "title": "Offers",
             "scope": "offers",
-            "api_url": "https://pcom1.ru",
+            "api_url": "https://line-game.name",
             "api_version": "v1",
             "settings": {
                 "liquickstartst": {
