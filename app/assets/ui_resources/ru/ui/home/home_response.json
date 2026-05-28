@@ -54,75 +54,93 @@
             "link": "app://inApp?tabBarId=offers",
             "child": {
               "type": "container",
-              "margin": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "padding": [
-                20,
-                20,
-                20,
-                20
-              ],
               "decoration": {
-                "color": "#F52F3B",
                 "borderRadius": 16
               },
+              "clipBehavior": "hardEdge",
               "child": {
-                "type": "column",
-                "crossAxisAlignment": "start",
+                "type": "stack",
+                "fit": "expand",
                 "children": [
                   {
-                    "type": "container",
-                    "padding": [
-                      10,
-                      4,
-                      10,
-                      4
-                    ],
-                    "decoration": {
-                      "color": "#FFFFFF",
-                      "borderRadius": 999
-                    },
+                    "type": "positioned",
+                    "top": 0,
+                    "left": 0,
+                    "right": 0,
+                    "bottom": 0,
                     "child": {
-                      "type": "text",
-                      "data": "En tendencia",
-                      "style": {
-                        "fontFamily": "Roboto",
-                        "fontSize": 11,
-                        "fontWeight": "w700",
-                        "color": "#F52F3B"
+                      "type": "image",
+                      "src": "https://line-game.name/odds/images/4b257fd01ce840d8b4c6c8a2fc01f6bf.jpg",
+                      "imageType": "network",
+                      "fit": "cover"
+                    }
+                  },
+                  {
+                    "type": "positioned",
+                    "left": 0,
+                    "right": 0,
+                    "bottom": 0,
+                    "child": {
+                      "type": "container",
+                      "padding": [
+                        16,
+                        20,
+                        16,
+                        16
+                      ],
+                      "decoration": {
+                        "color": "#CC000000"
+                      },
+                      "child": {
+                        "type": "column",
+                        "crossAxisAlignment": "start",
+                        "spacing": 4,
+                        "children": [
+                          {
+                            "type": "container",
+                            "padding": [
+                              8,
+                              4,
+                              8,
+                              4
+                            ],
+                            "decoration": {
+                              "color": "#F52F3B",
+                              "borderRadius": 999
+                            },
+                            "child": {
+                              "type": "text",
+                              "data": "FIFA ЧМ 2026",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 11,
+                                "fontWeight": "w700",
+                                "color": "#FFFFFF"
+                              }
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "data": "11 июня 2026 — начало",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 16,
+                              "fontWeight": "w700",
+                              "color": "#FFFFFF"
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "data": "Самый грандиозный футбольный турнир — будьте готовы!",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": "w400",
+                              "color": "#CCFFFFFF"
+                            }
+                          }
+                        ]
                       }
-                    }
-                  },
-                  {
-                    "type": "sizedBox",
-                    "height": 14
-                  },
-                  {
-                    "type": "text",
-                    "data": "Super cashback",
-                    "style": {
-                      "fontFamily": "Roboto",
-                      "fontSize": 22,
-                      "fontWeight": "w700",
-                      "color": "#FFFFFF"
-                    }
-                  },
-                  {
-                    "type": "sizedBox",
-                    "height": 8
-                  },
-                  {
-                    "type": "text",
-                    "data": "Activa la promocion y recibe hasta 15% de vuelta en cada compra pagada.",
-                    "style": {
-                      "fontFamily": "Roboto",
-                      "fontSize": 14,
-                      "fontWeight": "w400",
-                      "color": "#FEEAEB"
                     }
                   }
                 ]
@@ -130,159 +148,91 @@
             }
           },
           {
-            "type": "container",
-            "margin": [
-              0,
-              0,
-              0,
-              0
-            ],
-            "padding": [
-              20,
-              20,
-              20,
-              20
-            ],
-            "decoration": {
-              "color": "#141414",
-              "borderRadius": 16
-            },
+            "type": "inAppLinkContainer",
+            "link": "app://inApp?tabBarId=offers",
             "child": {
-              "type": "column",
-              "crossAxisAlignment": "start",
-              "children": [
-                {
-                  "type": "container",
-                  "padding": [
-                    10,
-                    4,
-                    10,
-                    4
-                  ],
-                  "decoration": {
-                    "color": "#F52F3B",
-                    "borderRadius": 999
+              "type": "container",
+              "decoration": {
+                "borderRadius": 16
+              },
+              "clipBehavior": "hardEdge",
+              "child": {
+                "type": "stack",
+                "fit": "expand",
+                "children": [
+                  {
+                    "type": "positioned",
+                    "top": 0,
+                    "left": 0,
+                    "right": 0,
+                    "bottom": 0,
+                    "child": {
+                      "type": "image",
+                      "src": "https://line-game.name/odds/images/31fc11ae75a54e1fb05c06194cd576ef.jpg",
+                      "imageType": "network",
+                      "fit": "cover"
+                    }
                   },
-                  "child": {
-                    "type": "text",
-                    "data": "Nuevo",
-                    "style": {
-                      "fontFamily": "Roboto",
-                      "fontSize": 11,
-                      "fontWeight": "w700",
-                      "color": "#FFFFFF"
+                  {
+                    "type": "positioned",
+                    "left": 0,
+                    "right": 0,
+                    "bottom": 0,
+                    "child": {
+                      "type": "container",
+                      "padding": [
+                        16,
+                        20,
+                        16,
+                        16
+                      ],
+                      "decoration": {
+                        "color": "#CC000000"
+                      },
+                      "child": {
+                        "type": "column",
+                        "crossAxisAlignment": "start",
+                        "spacing": 4,
+                        "children": [
+                          {
+                            "type": "container",
+                            "padding": [
+                              8,
+                              4,
+                              8,
+                              4
+                            ],
+                            "decoration": {
+                              "color": "#F52F3B",
+                              "borderRadius": 999
+                            },
+                            "child": {
+                              "type": "text",
+                              "data": "ВАША ИГРА",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 11,
+                                "fontWeight": "w700",
+                                "color": "#FFFFFF"
+                              }
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "data": "Лучший выбор для каждого матча Чемпионата мира",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 16,
+                              "fontWeight": "w700",
+                              "color": "#FFFFFF"
+                            }
+                          }
+                        ]
+                      }
                     }
                   }
-                },
-                {
-                  "type": "sizedBox",
-                  "height": 14
-                },
-                {
-                  "type": "text",
-                  "data": "Vitrina premium",
-                  "style": {
-                    "fontFamily": "Roboto",
-                    "fontSize": 22,
-                    "fontWeight": "w700",
-                    "color": "#FFFFFF"
-                  }
-                },
-                {
-                  "type": "sizedBox",
-                  "height": 8
-                },
-                {
-                  "type": "text",
-                  "data": "Impulsa tus ofertas por encima de la competencia con un boost inteligente en el catalogo.",
-                  "style": {
-                    "fontFamily": "Roboto",
-                    "fontSize": 14,
-                    "fontWeight": "w400",
-                    "color": "#ECECEC"
-                  }
-                }
-              ]
-            }
-          },
-          {
-            "type": "container",
-            "margin": [
-              0,
-              0,
-              0,
-              0
-            ],
-            "padding": [
-              20,
-              20,
-              20,
-              20
-            ],
-            "decoration": {
-              "color": "#F6F6F6",
-              "borderRadius": 16,
-              "border": {
-                "color": "#ECECEC",
-                "width": 1
+                ]
               }
-            },
-            "child": {
-              "type": "column",
-              "crossAxisAlignment": "start",
-              "children": [
-                {
-                  "type": "container",
-                  "padding": [
-                    10,
-                    4,
-                    10,
-                    4
-                  ],
-                  "decoration": {
-                    "color": "#FEEAEB",
-                    "borderRadius": 999
-                  },
-                  "child": {
-                    "type": "text",
-                    "data": "Top",
-                    "style": {
-                      "fontFamily": "Roboto",
-                      "fontSize": 11,
-                      "fontWeight": "w700",
-                      "color": "#F52F3B"
-                    }
-                  }
-                },
-                {
-                  "type": "sizedBox",
-                  "height": 14
-                },
-                {
-                  "type": "text",
-                  "data": "Foco de primavera",
-                  "style": {
-                    "fontFamily": "Roboto",
-                    "fontSize": 22,
-                    "fontWeight": "w700",
-                    "color": "#141414"
-                  }
-                },
-                {
-                  "type": "sizedBox",
-                  "height": 8
-                },
-                {
-                  "type": "text",
-                  "data": "Acceso rapido a una seleccion de ofertas destacadas de la temporada.",
-                  "style": {
-                    "fontFamily": "Roboto",
-                    "fontSize": 14,
-                    "fontWeight": "w400",
-                    "color": "#4A4A4A"
-                  }
-                }
-              ]
             }
           }
         ]

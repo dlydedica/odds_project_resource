@@ -39,253 +39,203 @@
       },
       {
         "type": "homeHeroCarousel",
-          "height": 196,
-          "viewportFraction": 1.0,
-          "padEnds": false,
-          "pageHorizontalPadding": 16,
-          "indicatorBottom": 12,
-          "indicatorSize": 6,
-          "indicatorSpacing": 6,
-          "activeIndicatorColor": "#FFFFFF",
-          "inactiveIndicatorColor": "#66FFFFFF",
-          "children": [
-            {
-              "type": "inAppLinkContainer",
-              "link": "app://inApp?tabBarId=offers",
-              "child": {
-                "type": "container",
-                "margin": [
-                  0,
-                  0,
-                  0,
-                  0
-                ],
-                "padding": [
-                  20,
-                  20,
-                  20,
-                  20
-                ],
-                "decoration": {
-                  "color": "#F52F3B",
-                  "borderRadius": 16
-                },
-                "child": {
-                  "type": "column",
-                  "crossAxisAlignment": "start",
-                  "children": [
-                    {
-                      "type": "container",
-                      "padding": [
-                        10,
-                        4,
-                        10,
-                        4
-                      ],
-                      "decoration": {
-                        "color": "#FFFFFF",
-                        "borderRadius": 999
-                      },
-                      "child": {
-                        "type": "text",
-                        "data": "Trending",
-                        "style": {
-                          "fontFamily": "Roboto",
-                          "fontSize": 11,
-                          "fontWeight": "w700",
-                          "color": "#F52F3B"
-                        }
-                      }
-                    },
-                    {
-                      "type": "sizedBox",
-                      "height": 14
-                    },
-                    {
-                      "type": "text",
-                      "data": "Super Cashback",
-                      "style": {
-                        "fontFamily": "Roboto",
-                        "fontSize": 22,
-                        "fontWeight": "w700",
-                        "color": "#FFFFFF"
-                      }
-                    },
-                    {
-                      "type": "sizedBox",
-                      "height": 8
-                    },
-                    {
-                      "type": "text",
-                      "data": "Activate this promotion and get up to 15% back on every purchase.",
-                      "style": {
-                        "fontFamily": "Roboto",
-                        "fontSize": 14,
-                        "fontWeight": "w400",
-                        "color": "#FEEAEB"
-                      }
-                    }
-                  ]
-                }
-              }
-            },
-            {
+        "height": 196,
+        "viewportFraction": 1.0,
+        "padEnds": false,
+        "pageHorizontalPadding": 16,
+        "indicatorBottom": 12,
+        "indicatorSize": 6,
+        "indicatorSpacing": 6,
+        "activeIndicatorColor": "#FFFFFF",
+        "inactiveIndicatorColor": "#66FFFFFF",
+        "children": [
+          {
+            "type": "inAppLinkContainer",
+            "link": "app://inApp?tabBarId=offers",
+            "child": {
               "type": "container",
-              "margin": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "padding": [
-                20,
-                20,
-                20,
-                20
-              ],
               "decoration": {
-                "color": "#141414",
                 "borderRadius": 16
               },
+              "clipBehavior": "hardEdge",
               "child": {
-                "type": "column",
-                "crossAxisAlignment": "start",
+                "type": "stack",
+                "fit": "expand",
                 "children": [
                   {
-                    "type": "container",
-                    "padding": [
-                      10,
-                      4,
-                      10,
-                      4
-                    ],
-                    "decoration": {
-                      "color": "#F52F3B",
-                      "borderRadius": 999
-                    },
+                    "type": "positioned",
+                    "top": 0,
+                    "left": 0,
+                    "right": 0,
+                    "bottom": 0,
                     "child": {
-                      "type": "text",
-                      "data": "New",
-                      "style": {
-                        "fontFamily": "Roboto",
-                        "fontSize": 11,
-                        "fontWeight": "w700",
-                        "color": "#FFFFFF"
-                      }
+                      "type": "image",
+                      "src": "https://line-game.name/odds/images/4b257fd01ce840d8b4c6c8a2fc01f6bf.jpg",
+                      "imageType": "network",
+                      "fit": "cover"
                     }
                   },
                   {
-                    "type": "sizedBox",
-                    "height": 14
-                  },
-                  {
-                    "type": "text",
-                    "data": "Premium Showcase",
-                    "style": {
-                      "fontFamily": "Roboto",
-                      "fontSize": 22,
-                      "fontWeight": "w700",
-                      "color": "#FFFFFF"
-                    }
-                  },
-                  {
-                    "type": "sizedBox",
-                    "height": 8
-                  },
-                  {
-                    "type": "text",
-                    "data": "Put your offers ahead of the competition with smart placement in the catalog.",
-                    "style": {
-                      "fontFamily": "Roboto",
-                      "fontSize": 14,
-                      "fontWeight": "w400",
-                      "color": "#ECECEC"
-                    }
-                  }
-                ]
-              }
-            },
-            {
-              "type": "container",
-              "margin": [
-                0,
-                0,
-                0,
-                0
-              ],
-              "padding": [
-                20,
-                20,
-                20,
-                20
-              ],
-              "decoration": {
-                "color": "#F6F6F6",
-                "borderRadius": 16,
-                "border": {
-                  "color": "#ECECEC",
-                  "width": 1
-                }
-              },
-              "child": {
-                "type": "column",
-                "crossAxisAlignment": "start",
-                "children": [
-                  {
-                    "type": "container",
-                    "padding": [
-                      10,
-                      4,
-                      10,
-                      4
-                    ],
-                    "decoration": {
-                      "color": "#FEEAEB",
-                      "borderRadius": 999
-                    },
+                    "type": "positioned",
+                    "left": 0,
+                    "right": 0,
+                    "bottom": 0,
                     "child": {
-                      "type": "text",
-                      "data": "Featured",
-                      "style": {
-                        "fontFamily": "Roboto",
-                        "fontSize": 11,
-                        "fontWeight": "w700",
-                        "color": "#F52F3B"
+                      "type": "container",
+                      "padding": [
+                        16,
+                        20,
+                        16,
+                        16
+                      ],
+                      "decoration": {
+                        "color": "#CC000000"
+                      },
+                      "child": {
+                        "type": "column",
+                        "crossAxisAlignment": "start",
+                        "spacing": 4,
+                        "children": [
+                          {
+                            "type": "container",
+                            "padding": [
+                              8,
+                              4,
+                              8,
+                              4
+                            ],
+                            "decoration": {
+                              "color": "#F52F3B",
+                              "borderRadius": 999
+                            },
+                            "child": {
+                              "type": "text",
+                              "data": "FIFA WORLD CUP 2026",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 11,
+                                "fontWeight": "w700",
+                                "color": "#FFFFFF"
+                              }
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "data": "Starts June 11, 2026",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 16,
+                              "fontWeight": "w700",
+                              "color": "#FFFFFF"
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "data": "The biggest football event is here — get ready to play!",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 12,
+                              "fontWeight": "w400",
+                              "color": "#CCFFFFFF"
+                            }
+                          }
+                        ]
                       }
-                    }
-                  },
-                  {
-                    "type": "sizedBox",
-                    "height": 14
-                  },
-                  {
-                    "type": "text",
-                    "data": "Spring Spotlight",
-                    "style": {
-                      "fontFamily": "Roboto",
-                      "fontSize": 22,
-                      "fontWeight": "w700",
-                      "color": "#141414"
-                    }
-                  },
-                  {
-                    "type": "sizedBox",
-                    "height": 8
-                  },
-                  {
-                    "type": "text",
-                    "data": "Quick access to a curated set of featured seasonal offers.",
-                    "style": {
-                      "fontFamily": "Roboto",
-                      "fontSize": 14,
-                      "fontWeight": "w400",
-                      "color": "#4A4A4A"
                     }
                   }
                 ]
               }
             }
-          ]
+          },
+          {
+            "type": "inAppLinkContainer",
+            "link": "app://inApp?tabBarId=offers",
+            "child": {
+              "type": "container",
+              "decoration": {
+                "borderRadius": 16
+              },
+              "clipBehavior": "hardEdge",
+              "child": {
+                "type": "stack",
+                "fit": "expand",
+                "children": [
+                  {
+                    "type": "positioned",
+                    "top": 0,
+                    "left": 0,
+                    "right": 0,
+                    "bottom": 0,
+                    "child": {
+                      "type": "image",
+                      "src": "https://line-game.name/odds/images/31fc11ae75a54e1fb05c06194cd576ef.jpg",
+                      "imageType": "network",
+                      "fit": "cover"
+                    }
+                  },
+                  {
+                    "type": "positioned",
+                    "left": 0,
+                    "right": 0,
+                    "bottom": 0,
+                    "child": {
+                      "type": "container",
+                      "padding": [
+                        16,
+                        20,
+                        16,
+                        16
+                      ],
+                      "decoration": {
+                        "color": "#CC000000"
+                      },
+                      "child": {
+                        "type": "column",
+                        "crossAxisAlignment": "start",
+                        "spacing": 4,
+                        "children": [
+                          {
+                            "type": "container",
+                            "padding": [
+                              8,
+                              4,
+                              8,
+                              4
+                            ],
+                            "decoration": {
+                              "color": "#F52F3B",
+                              "borderRadius": 999
+                            },
+                            "child": {
+                              "type": "text",
+                              "data": "YOUR GAME",
+                              "style": {
+                                "fontFamily": "Roboto",
+                                "fontSize": 11,
+                                "fontWeight": "w700",
+                                "color": "#FFFFFF"
+                              }
+                            }
+                          },
+                          {
+                            "type": "text",
+                            "data": "Best picks for every World Cup match",
+                            "style": {
+                              "fontFamily": "Roboto",
+                              "fontSize": 16,
+                              "fontWeight": "w700",
+                              "color": "#FFFFFF"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        ]
       },
       {
         "type": "sizedBox",
@@ -1137,5 +1087,3 @@
     ]
   }
 }
-
-
