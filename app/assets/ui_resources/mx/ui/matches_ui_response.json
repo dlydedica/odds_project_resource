@@ -337,6 +337,11 @@
                         "crossAxisAlignment": "center",
                         "mainAxisAlignment": "center",
                         "children": [{
+                            "type": "sizedBox",
+                            "height": 10.0,
+                            "_visible_if": "{{promo_card_image_url}}"
+                          },
+                          {
                             "type": "text",
                             "data": "{{team_home_score}} : {{team_away_score}}",
                             "textAlign": "center",
@@ -352,26 +357,6 @@
                           {
                             "type": "sizedBox",
                             "height": 10.0
-                          },
-                          {
-                            "type": "center",
-                            "_visible_if": "{{promo_card_image_url}}",
-                            "child": {
-                              "type": "sizedBox",
-                              "width": 72.0,
-                              "height": 40.0,
-                              "child": {
-                                "type": "image",
-                                "src": "{{promo_card_image_url}}",
-                                "imageType": "network",
-                                "fit": "contain"
-                              }
-                            }
-                          },
-                          {
-                            "type": "sizedBox",
-                            "height": 10.0,
-                            "_visible_if": "{{promo_card_image_url}}"
                           },
                           {
                             "type": "center",
@@ -397,6 +382,26 @@
                                   "fontWeight": "w700",
                                   "color": "#C62828"
                                 }
+                              }
+                            }
+                          },
+                          {
+                            "type": "sizedBox",
+                            "height": 10.0,
+                            "_visible_if": "{{promo_card_image_url}}"
+                          },
+                          {
+                            "type": "center",
+                            "_visible_if": "{{promo_card_image_url}}",
+                            "child": {
+                              "type": "sizedBox",
+                              "width": 36.0,
+                              "height": 20.0,
+                              "child": {
+                                "type": "image",
+                                "src": "{{promo_card_image_url}}",
+                                "imageType": "network",
+                                "fit": "contain"
                               }
                             }
                           }
@@ -764,6 +769,11 @@
                         "crossAxisAlignment": "center",
                         "mainAxisAlignment": "center",
                         "children": [{
+                            "type": "sizedBox",
+                            "height": 10.0,
+                            "_visible_if": "{{promo_card_image_url}}"
+                          },
+                          {
                             "type": "text",
                             "data": "VS",
                             "textAlign": "center",
@@ -779,26 +789,6 @@
                           {
                             "type": "sizedBox",
                             "height": 10.0
-                          },
-                          {
-                            "type": "center",
-                            "_visible_if": "{{promo_card_image_url}}",
-                            "child": {
-                              "type": "sizedBox",
-                              "width": 72.0,
-                              "height": 40.0,
-                              "child": {
-                                "type": "image",
-                                "src": "{{promo_card_image_url}}",
-                                "imageType": "network",
-                                "fit": "contain"
-                              }
-                            }
-                          },
-                          {
-                            "type": "sizedBox",
-                            "height": 10.0,
-                            "_visible_if": "{{promo_card_image_url}}"
                           },
                           {
                             "type": "center",
@@ -824,6 +814,26 @@
                                   "fontWeight": "w600",
                                   "color": "#E65100"
                                 }
+                              }
+                            }
+                          },
+                          {
+                            "type": "sizedBox",
+                            "height": 10.0,
+                            "_visible_if": "{{promo_card_image_url}}"
+                          },
+                          {
+                            "type": "center",
+                            "_visible_if": "{{promo_card_image_url}}",
+                            "child": {
+                              "type": "sizedBox",
+                              "width": 36.0,
+                              "height": 20.0,
+                              "child": {
+                                "type": "image",
+                                "src": "{{promo_card_image_url}}",
+                                "imageType": "network",
+                                "fit": "contain"
                               }
                             }
                           }
@@ -1191,6 +1201,11 @@
                         "crossAxisAlignment": "center",
                         "mainAxisAlignment": "center",
                         "children": [{
+                            "type": "sizedBox",
+                            "height": 10.0,
+                            "_visible_if": "{{promo_card_image_url}}"
+                          },
+                          {
                             "type": "text",
                             "data": "{{team_home_score}} : {{team_away_score}}",
                             "textAlign": "center",
@@ -1206,26 +1221,6 @@
                           {
                             "type": "sizedBox",
                             "height": 10.0
-                          },
-                          {
-                            "type": "center",
-                            "_visible_if": "{{promo_card_image_url}}",
-                            "child": {
-                              "type": "sizedBox",
-                              "width": 72.0,
-                              "height": 40.0,
-                              "child": {
-                                "type": "image",
-                                "src": "{{promo_card_image_url}}",
-                                "imageType": "network",
-                                "fit": "contain"
-                              }
-                            }
-                          },
-                          {
-                            "type": "sizedBox",
-                            "height": 10.0,
-                            "_visible_if": "{{promo_card_image_url}}"
                           },
                           {
                             "type": "center",
@@ -1251,6 +1246,26 @@
                                   "fontWeight": "w600",
                                   "color": "#888888"
                                 }
+                              }
+                            }
+                          },
+                          {
+                            "type": "sizedBox",
+                            "height": 10.0,
+                            "_visible_if": "{{promo_card_image_url}}"
+                          },
+                          {
+                            "type": "center",
+                            "_visible_if": "{{promo_card_image_url}}",
+                            "child": {
+                              "type": "sizedBox",
+                              "width": 36.0,
+                              "height": 20.0,
+                              "child": {
+                                "type": "image",
+                                "src": "{{promo_card_image_url}}",
+                                "imageType": "network",
+                                "fit": "contain"
                               }
                             }
                           }
