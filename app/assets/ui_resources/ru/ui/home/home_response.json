@@ -70,7 +70,7 @@
                     "bottom": 0,
                     "child": {
                       "type": "image",
-                      "src": "https://line-game.name/odds/images/4b257fd01ce840d8b4c6c8a2fc01f6bf.jpg",
+                      "src": "https://line-game.name/odds/images/baf15165aeeb4654a58aaed82b9634ab.jpg",
                       "imageType": "network",
                       "fit": "cover"
                     }
@@ -168,7 +168,7 @@
                     "bottom": 0,
                     "child": {
                       "type": "image",
-                      "src": "https://line-game.name/odds/images/31fc11ae75a54e1fb05c06194cd576ef.jpg",
+                      "src": "https://line-game.name/odds/images/ece37c25701b42b996343ac4c6e473d6.jpg",
                       "imageType": "network",
                       "fit": "cover"
                     }
