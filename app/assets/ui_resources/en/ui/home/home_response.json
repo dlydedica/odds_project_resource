@@ -89,7 +89,7 @@
                         16
                       ],
                       "decoration": {
-                        "color": "#CC000000"
+                        "color": "#88000000"
                       },
                       "child": {
                         "type": "column",
@@ -187,7 +187,7 @@
                         16
                       ],
                       "decoration": {
-                        "color": "#CC000000"
+                        "color": "#88000000"
                       },
                       "child": {
                         "type": "column",
