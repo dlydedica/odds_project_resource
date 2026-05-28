@@ -71,6 +71,15 @@
             ]
         },
         {
+            "feed_id": "matches-promo-main",
+            "feed_key": "matches_promo",
+            "feed_type": "matches_promo",
+            "title": "Matches Promo",
+            "scope": "matches",
+            "card_url": "https://1xbet.com",
+            "image_url": "https://sportotvet.ru/wp-content/uploads/2016/06/1xbet-6-300x110.png"
+        },
+        {
             "feed_id": "matches-main",
             "feed_key": "matches",
             "feed_type": "openapi",
