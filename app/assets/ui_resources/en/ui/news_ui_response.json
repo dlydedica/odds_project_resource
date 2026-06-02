@@ -28,10 +28,10 @@
     "relative_time_max_days": 7,
     "time_labels": {
       "no_date": "No date",
-      "just_now": "just now",
-      "minutes_ago": "min ago",
-      "hours_ago": "h ago",
-      "days_ago": "d ago"
+      "just_now": "Just now",
+      "minutes_ago": "minutes ago",
+      "hours_ago": "hours ago",
+      "days_ago": "days ago"
     },
     "layout": {
       "card_border_radius": 12,

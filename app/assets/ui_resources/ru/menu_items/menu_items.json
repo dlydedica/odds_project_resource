@@ -2,7 +2,7 @@
        "menuItems": [{
            "icon": "privacy_tip",
            "title": "Политика безопасности",
-           "url": "https://www.example.com/privacy-policy",
+           "url": "https://docs.google.com/document/d/11p2HiPs1Rmr-P5_ltaPLKGLU6fl98EMWUbbao6WUv0c/edit?usp=sharing",
            "isExternal": true
        }]
    }

@@ -1,6 +1,5 @@
 {
-    "feeds": [
-        {
+    "feeds": [{
             "feed_id": "news-rss-main",
             "feed_type": "rss",
             "scope": "news",
@@ -14,15 +13,14 @@
                     "enabled": false
                 }
             },
-            "endpoints": [
-                {
+            "endpoints": [{
                     "feed_key": "football",
                     "title": "Liga MX",
                     "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/futbol/liga-mx.xml"
                 },
                 {
                     "feed_key": "lucha",
-                    "title": "Lucha Libre",
+                    "title": "Wrestling",
                     "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/lucha-libre.xml"
                 },
                 {
@@ -32,22 +30,22 @@
                 },
                 {
                     "feed_key": "tennis",
-                    "title": "Tenis",
+                    "title": "Tennis",
                     "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/tenis.xml"
                 },
                 {
                     "feed_key": "formula1",
-                    "title": "Fórmula 1",
+                    "title": "Formula 1",
                     "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/motor/f1.xml"
                 },
                 {
                     "feed_key": "motosport",
-                    "title": "Motociclismo",
+                    "title": "Motorcycling",
                     "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/motor/motociclismo.xml"
                 },
                 {
                     "feed_key": "boxing",
-                    "title": "Boxeo",
+                    "title": "Boxing",
                     "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/boxeo.xml"
                 },
                 {
@@ -67,39 +65,48 @@
                 },
                 {
                     "feed_key": "mexico_team",
-                    "title": "Selección de México",
+                    "title": "Mexico National Team",
                     "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/futbol/seleccion-mx.xml"
                 }
             ]
         },
         {
+            "feed_id": "matches-promo-main",
+            "feed_key": "matches_promo",
+            "feed_type": "matches_promo",
+            "title": "Matches Promo",
+            "scope": "matches",
+            "card_url": "https://1xbet.com",
+            "image_url": "https://sportotvet.ru/wp-content/uploads/2016/06/1xbet-6-300x110.png"
+        },
+        {
             "feed_id": "matches-main",
             "feed_key": "matches",
             "feed_type": "openapi",
-            "title": "Partidos",
+            "title": "Matches",
             "scope": "events",
             "api_url": "https://parser.pcom1.ru",
             "api_version": "v4",
-            "tabs": [
+            "tabs":[
                 {
                     "key": "football",
-                    "title": "Fútbol"
+                    "title": "Football"
                 },
                 {
                     "key": "basketball",
-                    "title": "Baloncesto"
+                    "title": "Basketball"
                 },
                 {
                     "key": "tennis",
-                    "title": "Tenis"
+                    "title": "Tennis"
                 },
                 {
                     "key": "voleybol",
-                    "title": "Voleibol"
+                    "title": "Volleyball"
                 },
                 {
                     "key": "hockey",
-                    "title": "Hockey sobre hielo"
+                    "title": "Ice Hockey"
                 },
                 {
                     "key": "esports",
@@ -144,7 +151,38 @@
                 "period.time": "match_time",
                 "start_time_utc": "kickoff_at",
                 "status": "status",
+                "markets.0.odds.home": "odds_home",
+                "markets.0.odds.draw": "odds_draw",
+                "markets.0.odds.away": "odds_away",
+                "markets.0.selections.0.c": "has_odds",
                 "meta.ui.block_type": "block_type"
+            }
+        },
+        {
+            "feed_id": "offers-main",
+            "feed_key": "offers",
+            "token_type": "Bearer",
+            "feed_type": "openapi",
+            "title": "Offers",
+            "scope": "offers",
+            "api_url": "https://line-game.name/odds",
+            "api_version": "v2",
+            "settings": {
+                "quickstart": {
+                    "endpoint": "/v2/mobile/offers"
+                },
+                "polling": {
+                    "endpoint": "/v2/mobile/offers/poll"
+                },
+                "cache": {
+                    "namespace": "offers",
+                    "ttl_sec": 86400
+                }
+            },
+            "api": {
+                "list": "/v2/mobile/offers",
+                "polling": "/v2/mobile/offers/poll",
+                "id": "/v2/mobile/offers/{id}"
             }
         }
     ]

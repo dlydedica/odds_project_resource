@@ -1,5 +1,6 @@
 {
-    "feeds": [{
+    "feeds": [
+        {
             "feed_id": "news-rss-main",
             "feed_type": "rss",
             "scope": "news",
@@ -13,7 +14,8 @@
                     "enabled": false
                 }
             },
-            "endpoints": [{
+            "endpoints": [
+                {
                     "feed_key": "football",
                     "title": "Liga MX",
                     "endpoint": "https://e01-mx-marca.uecdn.es/mx/rss/futbol/liga-mx.xml"
@@ -71,15 +73,6 @@
             ]
         },
         {
-            "feed_id": "matches-promo-main",
-            "feed_key": "matches_promo",
-            "feed_type": "matches_promo",
-            "title": "Matches Promo",
-            "scope": "matches",
-            "card_url": "https://1xbet.com",
-            "image_url": "https://sportotvet.ru/wp-content/uploads/2016/06/1xbet-6-300x110.png"
-        },
-        {
             "feed_id": "matches-main",
             "feed_key": "matches",
             "feed_type": "openapi",
@@ -87,7 +80,7 @@
             "scope": "events",
             "api_url": "https://parser.pcom1.ru",
             "api_version": "v4",
-            "tabs":[
+            "tabs": [
                 {
                     "key": "football",
                     "title": "Football"
@@ -151,38 +144,7 @@
                 "period.time": "match_time",
                 "start_time_utc": "kickoff_at",
                 "status": "status",
-                "markets.0.odds.home": "odds_home",
-                "markets.0.odds.draw": "odds_draw",
-                "markets.0.odds.away": "odds_away",
-                "markets.0.selections.0.c": "has_odds",
                 "meta.ui.block_type": "block_type"
-            }
-        },
-        {
-            "feed_id": "offers-main",
-            "feed_key": "offers",
-            "token_type": "Bearer",
-            "feed_type": "openapi",
-            "title": "Offers",
-            "scope": "offers",
-            "api_url": "https://line-game.name/odds",
-            "api_version": "v2",
-            "settings": {
-                "quickstart": {
-                    "endpoint": "/v2/mobile/offers"
-                },
-                "polling": {
-                    "endpoint": "/v2/mobile/offers/poll"
-                },
-                "cache": {
-                    "namespace": "offers",
-                    "ttl_sec": 86400
-                }
-            },
-            "api": {
-                "list": "/v2/mobile/offers",
-                "polling": "/v2/mobile/offers/poll",
-                "id": "/v2/mobile/offers/{id}"
             }
         }
     ]
