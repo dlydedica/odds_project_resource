@@ -108,7 +108,7 @@
             ],
             "settings": {
                 "quickstart": {
-                    "endpoint": "/v4/events?sports=football&leagues=mls,world_cup_2026_winner,world_cup_2026_special_bets,world_cup_2026_england_national_team&lang=mx"
+                    "endpoint": "/v4/events?sports=football,basketball,tennis,volleyball,hockey,esports&leagues=mls,world_cup_2026_winner,world_cup_2026_special_bets,world_cup_2026_england_national_team,club_friendlies,friendlies_national_teams,friendlies_national_teams_women,nba_special_bets,nba_2026_draft,el_salvador_liga_superior,davis_cup,billie_jean_king_cup,atp_roland_garros_2026_winner,atp_roland_garros_2026_special_bets,wta_roland_garros_2026_special_bets,wimbledon_qualification,upvl_nations_league_women,orange_cup,nhl_special_bets,nhl_2026_draft,iihf_world_championship_2026&lang=mx"
                 },
                 "page": {
                     "endpoint": "/v4/events?sports={sports}&cursor={cursor}&limit=100&lang=mx"
