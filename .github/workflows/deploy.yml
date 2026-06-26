@@ -1,4 +1,5 @@
 name: Deploy UI Resources
+# первоначальные настройки
 
 on:
   push:
