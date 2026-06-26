@@ -1,0 +1,41 @@
+name: Deploy UI Resources
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'app/assets/ui_resources/**'
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: 'Пробный прогон (без отправки на сервер)'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: ${{ !inputs.dry_run }}
+
+    steps:
+      - name: Checkout репозитория
+        uses: actions/checkout@v4
+
+      - name: Копирование UI ресурсов на сервер через SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          port: ${{ secrets.SERVER_PORT || '22' }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          source: 'app/assets/ui_resources/*'
+          target: '/www/parser_project/resours/app/lg/v2/data/ui_resources'
+          strip_components: 3
+          # strip_components: 3 убирает 'app/assets/ui_resources/',
+          # так что en/, mx/, ru/ и init_response.json
+          # скопируются прямо в ui_resources/
+
+      - name: Уведомление об успехе
+        run: echo "✅ UI ресурсы успешно развёрнуты на сервере"
