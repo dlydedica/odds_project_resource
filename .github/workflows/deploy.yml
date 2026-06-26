@@ -4,8 +4,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'app/assets/ui_resources/**'
   workflow_dispatch:
     inputs:
       dry_run:
