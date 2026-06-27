@@ -5,6 +5,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'app/assets/ui_resources/**'
+      - '.github/workflows/deploy.yml'
   workflow_dispatch:
     inputs:
       dry_run:
@@ -29,12 +32,15 @@ jobs:
           username: ${{ secrets.DEPLOY_USER }}
           port: ${{ secrets.SERVER_PORT || '22' }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
-          source: 'app/assets/ui_resources/*'
-          target: '/www/parser_project/resours/app/lg/v2/data/ui_resources'
+          source: 'app/assets/ui_resources/'
+          target: '/www/parser_project/resours/app/lg/v2/ui_resources'
           strip_components: 3
+          rm: true
           # strip_components: 3 убирает 'app/assets/ui_resources/',
           # так что en/, mx/, ru/ и init_response.json
           # скопируются прямо в ui_resources/
+          # rm: true — очищает целевую директорию перед копированием,
+          # чтобы удалённые локально файлы не оставались на сервере
 
       - name: Уведомление об успехе
         run: echo "✅ UI ресурсы успешно развёрнуты на сервере"
