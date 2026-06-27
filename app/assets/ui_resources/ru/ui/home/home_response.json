@@ -70,7 +70,7 @@
                     "bottom": 0,
                     "child": {
                       "type": "image",
-                      "src": "https://s3.regru.cloud/line-game-img/odds/images/3e7be4f9173f4baab65717d85bdb6cef.jpg?response-content-disposition=inline&response-content-type=image%2Fjpeg&AWSAccessKeyId=F9SIHSGQ4SY4J1R9Q786&Signature=aPjOW%2BDaC3zOVi3LEoJtOasCH%2B4%3D&Expires=1782542756",
+                      "src": "https://s3.regru.cloud/line-game-img/odds/images/3e7be4f9173f4baab65717d85bdb6cef.jpg",
                       "imageType": "network",
                       "fit": "cover"
                     }
@@ -168,7 +168,7 @@
                     "bottom": 0,
                     "child": {
                       "type": "image",
-                      "src": "https://s3.regru.cloud/line-game-img/odds/images/473b7dba94f34a248bcbdfadfbdba41c.jpg?response-content-disposition=inline&response-content-type=image%2Fjpeg&AWSAccessKeyId=F9SIHSGQ4SY4J1R9Q786&Signature=iPrt9vozzjp9gRLJ8MuifQ26nqc%3D&Expires=1782542756",
+                      "src": "https://s3.regru.cloud/line-game-img/odds/images/473b7dba94f34a248bcbdfadfbdba41c.jpg",
                       "imageType": "network",
                       "fit": "cover"
                     }

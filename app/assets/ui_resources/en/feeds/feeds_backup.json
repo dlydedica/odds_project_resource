@@ -85,7 +85,7 @@
             "feed_type": "openapi",
             "title": "Matches",
             "scope": "events",
-            "api_url": "https://parser.pcom1.ru",
+            "api_url": "https://app.line-game.name",
             "api_version": "v4",
             "tabs":[
                 {
