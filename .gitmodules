@@ -1,0 +1,3 @@
+[submodule ".github/standards"]
+	path = .github/standards
+	url = https://github.com/dlydedica/odds-copilot-standards.git

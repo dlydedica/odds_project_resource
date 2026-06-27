@@ -95,6 +95,14 @@ JSON-виджеты, которые ты создаёшь, рендерятся 
 ## Связанные скилы
 
 При выполнении задач загружай соответствующие скилы:
-- `sdui-json-schema` — для работы с SDUI JSON форматом
-- `sdui-deployment` — для деплоя ресурсов
-- `stac-framework` — для понимания официального Stac SDK (виджеты, парсеры, рендеринг)
+- `sdui-json-schema` — для работы с SDUI JSON форматом (из `.github/standards/projects/odds_project_resource/skills/sdui-json-schema/` или локально `.github/skills/sdui-json-schema/`)
+- `sdui-deployment` — для деплоя ресурсов (из `.github/standards/projects/odds_project_resource/skills/sdui-deployment/` или локально `.github/skills/sdui-deployment/`)
+- `stac-framework` — для понимания официального Stac SDK (из `.github/standards/projects/odds_project_resource/skills/stac-framework/` или локально `.github/skills/stac-framework/`)
+
+Также доступны общие скилы из центрального репозитория:
+- `base/skills/` — общие скилы (архитектура, безопасность, QA, деплой)
+
+## Подключение к центральной библиотеке
+
+Скилы и агенты распространяются через submodule `.github/standards/`.
+Обновление: `git submodule update --remote .github/standards`.
