@@ -108,7 +108,7 @@
             ],
             "settings": {
                 "quickstart": {
-                    "endpoint": "/v4/events?sports=football&leagues=mls,world_cup_2026_winner,world_cup_2026_special_bets,world_cup_2026_england_national_team&lang=ru"
+                    "endpoint": "/v4/events?sports=all&per_sport_limit=10&limit=100&lang=ru"
                 },
                 "page": {
                     "endpoint": "/v4/events?sports={sports}&cursor={cursor}&limit=100&lang=ru"
