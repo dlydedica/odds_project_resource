@@ -6,20 +6,20 @@
         {
             "type": "icon",
             "icon": "search_off",
-            "size": 64,
+            "size": {{token.icon_size_xl}},
             "color": "{{token.text_secondary}}"
         },
         {
             "type": "sizedBox",
-            "height": 20
+            "height": {{token.spacing_xl}}
         },
         {
             "type": "text",
             "data": "{{t:fallback.not_found.title}}",
             "style": {
                 "fontFamily": "Roboto",
-                "fontSize": 20,
-                "fontWeight": "w700",
+                "fontSize": {{token.font_2xl}},
+                "fontWeight": {{token.font_bold}},
                 "color": "{{token.text_primary}}"
             }
         },
@@ -32,8 +32,8 @@
             "data": "{{t:fallback.not_found.message}}",
             "style": {
                 "fontFamily": "Roboto",
-                "fontSize": 14,
-                "fontWeight": "w400",
+                "fontSize": {{token.font_base}},
+                "fontWeight": {{token.font_normal}},
                 "color": "{{token.text_secondary}}"
             }
         }

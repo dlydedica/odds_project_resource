@@ -4,14 +4,14 @@
         {
             "type": "shimmer_block",
             "height": 180,
-            "borderRadius": 14,
+            "borderRadius": {{token.radius_card}},
             "margin": {
                 "bottom": 16
             }
         },
         {
             "type": "shimmer_block",
-            "height": 24,
+            "height": {{token.spacing_xxl}},
             "width": "50%",
             "borderRadius": 4,
             "margin": {
@@ -26,13 +26,13 @@
                     "type": "shimmer_block",
                     "height": 160,
                     "width": "48%",
-                    "borderRadius": 14
+                    "borderRadius": {{token.radius_card}}
                 },
                 {
                     "type": "shimmer_block",
                     "height": 160,
                     "width": "48%",
-                    "borderRadius": 14
+                    "borderRadius": {{token.radius_card}}
                 }
             ]
         },
@@ -42,7 +42,7 @@
         },
         {
             "type": "shimmer_block",
-            "height": 24,
+            "height": {{token.spacing_xxl}},
             "width": "35%",
             "borderRadius": 4,
             "margin": {
@@ -56,20 +56,20 @@
                 {
                     "type": "shimmer_block",
                     "height": 100,
-                    "width": 120,
-                    "borderRadius": 12
+                    "width": {{token.logo_size}},
+                    "borderRadius": {{token.radius_block}}
                 },
                 {
                     "type": "shimmer_block",
                     "height": 100,
-                    "width": 120,
-                    "borderRadius": 12
+                    "width": {{token.logo_size}},
+                    "borderRadius": {{token.radius_block}}
                 },
                 {
                     "type": "shimmer_block",
                     "height": 100,
-                    "width": 120,
-                    "borderRadius": 12
+                    "width": {{token.logo_size}},
+                    "borderRadius": {{token.radius_block}}
                 }
             ]
         }

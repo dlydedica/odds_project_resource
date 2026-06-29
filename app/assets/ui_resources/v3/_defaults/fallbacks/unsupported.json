@@ -6,20 +6,20 @@
         {
             "type": "icon",
             "icon": "system_update",
-            "size": 64,
+            "size": {{token.icon_size_xl}},
             "color": "{{token.accent}}"
         },
         {
             "type": "sizedBox",
-            "height": 20
+            "height": {{token.spacing_xl}}
         },
         {
             "type": "text",
             "data": "{{t:fallback.unsupported.title}}",
             "style": {
                 "fontFamily": "Roboto",
-                "fontSize": 20,
-                "fontWeight": "w700",
+                "fontSize": {{token.font_2xl}},
+                "fontWeight": {{token.font_bold}},
                 "color": "{{token.text_primary}}"
             }
         },
@@ -32,14 +32,14 @@
             "data": "{{t:fallback.unsupported.message}}",
             "style": {
                 "fontFamily": "Roboto",
-                "fontSize": 14,
-                "fontWeight": "w400",
+                "fontSize": {{token.font_base}},
+                "fontWeight": {{token.font_normal}},
                 "color": "{{token.text_secondary}}"
             }
         },
         {
             "type": "sizedBox",
-            "height": 24
+            "height": {{token.spacing_xxl}}
         },
         {
             "type": "inAppLinkContainer",
@@ -61,8 +61,8 @@
                     "data": "{{t:fallback.unsupported.button}}",
                     "style": {
                         "fontFamily": "Roboto",
-                        "fontSize": 16,
-                        "fontWeight": "w700",
+                        "fontSize": {{token.font_lg}},
+                        "fontWeight": {{token.font_bold}},
                         "color": "{{token.bg_light}}"
                     }
                 }

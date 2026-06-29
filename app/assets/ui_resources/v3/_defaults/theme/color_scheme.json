@@ -1,7 +1,7 @@
 {
     "type": "appTheme",
     "schema_version": "3.0.0",
-    "description": "v3 theme — based on v2 branding, restructured for layer system",
+    "description": "v3 theme — single source of truth for all design values. Server flattens into {{token.*}} for Stac JSON.",
     "typography": {
         "fontFamily": {
             "default": "Roboto",
@@ -34,6 +34,33 @@
             "relaxed": 1.75,
             "loose": 2.0
         }
+    },
+    "corner_radius": {
+        "card": 14,
+        "block": 12,
+        "pill": 999,
+        "button": 8,
+        "input": 8,
+        "thumbnail": 10,
+        "icon_container": 999,
+        "hero_banner": 16
+    },
+    "spacing": {
+        "xs": 4,
+        "sm": 8,
+        "md": 12,
+        "lg": 16,
+        "xl": 20,
+        "xxl": 24,
+        "section": 32,
+        "page_edge": 16,
+        "card_gap": 12,
+        "icon_size_sm": 20,
+        "icon_size_md": 32,
+        "icon_size_lg": 48,
+        "icon_size_xl": 64,
+        "logo_size": 120,
+        "splash_loader_size": 24
     },
     "mode": "light",
     "brand_scheme": {
