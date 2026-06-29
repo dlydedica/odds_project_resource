@@ -1,118 +1,303 @@
 {
-    "version": "3.0.0",
-    "feeds": [
+  "version": "3.0.0",
+  "feeds": [
+    {
+      "feed_id": "matches-football",
+      "type": "openapi_proxy",
+      "api": {
+        "base_url": "https://app.line-game.name",
+        "list": "/v4/events?sports=football&leagues={leagues}&lang={locale}",
+        "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+      },
+      "mapping": {
+        "event_uid": "id",
+        "sport.key": "sport_key",
+        "competition.key": "league_key",
+        "competition.name": "competition_name",
+        "participants.home.name": "team_home_name",
+        "participants.home.logo_url": "team_home_logo",
+        "participants.away.name": "team_away_name",
+        "participants.away.logo_url": "team_away_logo",
+        "score.home": "team_home_score",
+        "score.away": "team_away_score",
+        "period.time": "match_time",
+        "status": "status"
+      },
+      "cache_ttl_seconds": 10,
+      "league_order": [
         {
-            "feed_id": "matches-football",
-            "type": "openapi_proxy",
-            "api": {
-                "base_url": "https://app.line-game.name",
-                "list": "/v4/events?sports=football&leagues={leagues}&lang={locale}",
-                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
-            },
-            "mapping": {
-                "event_uid": "id",
-                "sport.key": "sport_key",
-                "competition.key": "league_key",
-                "competition.name": "competition_name",
-                "participants.home.name": "team_home_name",
-                "participants.home.logo_url": "team_home_logo",
-                "participants.away.name": "team_away_name",
-                "participants.away.logo_url": "team_away_logo",
-                "score.home": "team_home_score",
-                "score.away": "team_away_score",
-                "period.time": "match_time",
-                "status": "status"
-            },
-            "cache_ttl_seconds": 10
+          "id": "epl",
+          "name": "{{t:leagues.epl}}",
+          "position": 1,
+          "country": "england"
         },
         {
-            "feed_id": "matches-basketball",
-            "type": "openapi_proxy",
-            "api": {
-                "base_url": "https://app.line-game.name",
-                "list": "/v4/events?sports=basketball&leagues={leagues}&lang={locale}",
-                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
-            },
-            "mapping": {
-                "event_uid": "id",
-                "sport.key": "sport_key",
-                "competition.key": "league_key",
-                "competition.name": "competition_name",
-                "participants.home.name": "team_home_name",
-                "participants.away.name": "team_away_name",
-                "score.home": "team_home_score",
-                "score.away": "team_away_score",
-                "status": "status"
-            },
-            "cache_ttl_seconds": 10
+          "id": "laliga",
+          "name": "{{t:leagues.laliga}}",
+          "position": 2,
+          "country": "spain"
         },
         {
-            "feed_id": "matches-tennis",
-            "type": "openapi_proxy",
-            "api": {
-                "base_url": "https://app.line-game.name",
-                "list": "/v4/events?sports=tennis&leagues={leagues}&lang={locale}",
-                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
-            },
-            "mapping": {
-                "event_uid": "id",
-                "sport.key": "sport_key",
-                "competition.key": "league_key",
-                "participants.home.name": "team_home_name",
-                "participants.away.name": "team_away_name",
-                "score.home": "team_home_score",
-                "score.away": "team_away_score",
-                "status": "status"
-            },
-            "cache_ttl_seconds": 10
+          "id": "seriea",
+          "name": "{{t:leagues.seriea}}",
+          "position": 3,
+          "country": "italy"
         },
         {
-            "feed_id": "matches-hockey",
-            "type": "openapi_proxy",
-            "api": {
-                "base_url": "https://app.line-game.name",
-                "list": "/v4/events?sports=hockey&leagues={leagues}&lang={locale}",
-                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
-            },
-            "mapping": {
-                "event_uid": "id",
-                "sport.key": "sport_key",
-                "competition.key": "league_key",
-                "participants.home.name": "team_home_name",
-                "participants.away.name": "team_away_name",
-                "score.home": "team_home_score",
-                "score.away": "team_away_score",
-                "status": "status"
-            },
-            "cache_ttl_seconds": 10
+          "id": "bundesliga",
+          "name": "{{t:leagues.bundesliga}}",
+          "position": 4,
+          "country": "germany"
         },
         {
-            "feed_id": "matches-esports",
-            "type": "openapi_proxy",
-            "api": {
-                "base_url": "https://app.line-game.name",
-                "list": "/v4/events?sports=esports&leagues={leagues}&lang={locale}",
-                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
-            },
-            "mapping": {
-                "event_uid": "id",
-                "sport.key": "sport_key",
-                "competition.key": "league_key",
-                "participants.home.name": "team_home_name",
-                "participants.away.name": "team_away_name",
-                "score.home": "team_home_score",
-                "score.away": "team_away_score",
-                "status": "status"
-            },
-            "cache_ttl_seconds": 10
+          "id": "ligue1",
+          "name": "{{t:leagues.ligue1}}",
+          "position": 5,
+          "country": "france"
         },
         {
-            "feed_id": "news-rss-main",
-            "type": "rss_proxy",
-            "api": {
-                "endpoints_key": "rss_sources"
-            },
-            "cache_ttl_seconds": 300
+          "id": "rpl",
+          "name": "{{t:leagues.rpl}}",
+          "position": 6,
+          "country": "russia"
+        },
+        {
+          "id": "liga_mx",
+          "name": "{{t:leagues.liga_mx}}",
+          "position": 7,
+          "country": "mexico"
+        },
+        {
+          "id": "concachampions",
+          "name": "{{t:leagues.concachampions}}",
+          "position": 8,
+          "country": "mexico"
         }
-    ]
+      ]
+    },
+    {
+      "feed_id": "matches-basketball",
+      "type": "openapi_proxy",
+      "api": {
+        "base_url": "https://app.line-game.name",
+        "list": "/v4/events?sports=basketball&leagues={leagues}&lang={locale}",
+        "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+      },
+      "mapping": {
+        "event_uid": "id",
+        "sport.key": "sport_key",
+        "competition.key": "league_key",
+        "competition.name": "competition_name",
+        "participants.home.name": "team_home_name",
+        "participants.away.name": "team_away_name",
+        "score.home": "team_home_score",
+        "score.away": "team_away_score",
+        "status": "status"
+      },
+      "cache_ttl_seconds": 10,
+      "league_order": [
+        {
+          "id": "nba",
+          "name": "{{t:leagues.nba}}",
+          "position": 1
+        },
+        {
+          "id": "euroleague",
+          "name": "{{t:leagues.euroleague}}",
+          "position": 2
+        },
+        {
+          "id": "vtb",
+          "name": "{{t:leagues.vtb}}",
+          "position": 3
+        }
+      ]
+    },
+    {
+      "feed_id": "matches-tennis",
+      "type": "openapi_proxy",
+      "api": {
+        "base_url": "https://app.line-game.name",
+        "list": "/v4/events?sports=tennis&leagues={leagues}&lang={locale}",
+        "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+      },
+      "mapping": {
+        "event_uid": "id",
+        "sport.key": "sport_key",
+        "competition.key": "league_key",
+        "participants.home.name": "team_home_name",
+        "participants.away.name": "team_away_name",
+        "score.home": "team_home_score",
+        "score.away": "team_away_score",
+        "status": "status"
+      },
+      "cache_ttl_seconds": 10,
+      "league_order": [
+        {
+          "id": "atp",
+          "name": "ATP",
+          "position": 1
+        },
+        {
+          "id": "wta",
+          "name": "WTA",
+          "position": 2
+        },
+        {
+          "id": "grand_slam",
+          "name": "Grand Slam",
+          "position": 3
+        }
+      ]
+    },
+    {
+      "feed_id": "matches-hockey",
+      "type": "openapi_proxy",
+      "api": {
+        "base_url": "https://app.line-game.name",
+        "list": "/v4/events?sports=hockey&leagues={leagues}&lang={locale}",
+        "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+      },
+      "mapping": {
+        "event_uid": "id",
+        "sport.key": "sport_key",
+        "competition.key": "league_key",
+        "participants.home.name": "team_home_name",
+        "participants.away.name": "team_away_name",
+        "score.home": "team_home_score",
+        "score.away": "team_away_score",
+        "status": "status"
+      },
+      "cache_ttl_seconds": 10,
+      "league_order": [
+        {
+          "id": "nhl",
+          "name": "{{t:leagues.nhl}}",
+          "position": 1
+        },
+        {
+          "id": "khl",
+          "name": "{{t:leagues.khl}}",
+          "position": 2
+        }
+      ]
+    },
+    {
+      "feed_id": "matches-esports",
+      "type": "openapi_proxy",
+      "api": {
+        "base_url": "https://app.line-game.name",
+        "list": "/v4/events?sports=esports&leagues={leagues}&lang={locale}",
+        "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+      },
+      "mapping": {
+        "event_uid": "id",
+        "sport.key": "sport_key",
+        "competition.key": "league_key",
+        "participants.home.name": "team_home_name",
+        "participants.away.name": "team_away_name",
+        "score.home": "team_home_score",
+        "score.away": "team_away_score",
+        "status": "status"
+      },
+      "cache_ttl_seconds": 10,
+      "league_order": []
+    },
+    {
+      "feed_id": "news-rss-main",
+      "type": "rss_proxy",
+      "api": {
+        "endpoints_key": "rss_sources"
+      },
+      "cache_ttl_seconds": 300,
+      "sources": {
+        "en": [
+          {
+            "feed_key": "football",
+            "title": "Premier League",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/futbol/liga-mx.xml"
+          },
+          {
+            "feed_key": "basketball",
+            "title": "NBA",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/basquetbol/nba.xml"
+          },
+          {
+            "feed_key": "tennis",
+            "title": "Tennis",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/tenis.xml"
+          },
+          {
+            "feed_key": "formula1",
+            "title": "Formula 1",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/motor/f1.xml"
+          },
+          {
+            "feed_key": "boxing",
+            "title": "Boxing",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/boxeo.xml"
+          }
+        ],
+        "ru": [
+          {
+            "feed_key": "football",
+            "title": "Футбол",
+            "url": "https://sport.ru/rss/football.xml"
+          },
+          {
+            "feed_key": "hockey",
+            "title": "Хоккей",
+            "url": "https://sport.ru/rss/hockey.xml"
+          },
+          {
+            "feed_key": "basketball",
+            "title": "Баскетбол",
+            "url": "https://sport.ru/rss/basketball.xml"
+          },
+          {
+            "feed_key": "tennis",
+            "title": "Теннис",
+            "url": "https://sport.ru/rss/tennis.xml"
+          },
+          {
+            "feed_key": "formula1",
+            "title": "Формула 1",
+            "url": "https://sport.ru/rss/f1.xml"
+          }
+        ],
+        "mx": [
+          {
+            "feed_key": "football",
+            "title": "Liga MX",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/futbol/liga-mx.xml"
+          },
+          {
+            "feed_key": "lucha",
+            "title": "Lucha Libre",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/lucha-libre.xml"
+          },
+          {
+            "feed_key": "basketball",
+            "title": "NBA",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/basquetbol/nba.xml"
+          },
+          {
+            "feed_key": "tennis",
+            "title": "Tenis",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/tenis.xml"
+          },
+          {
+            "feed_key": "formula1",
+            "title": "Fórmula 1",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/motor/f1.xml"
+          },
+          {
+            "feed_key": "boxing",
+            "title": "Boxeo",
+            "url": "https://e01-mx-marca.uecdn.es/mx/rss/boxeo.xml"
+          }
+        ]
+      }
+    }
+  ]
 }

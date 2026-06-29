@@ -1,76 +1,100 @@
 {
-    "version": "3.0.0",
-    "locale": "mx",
-    "nav": {
-        "home": "Inicio",
-        "matches": "Partidos",
-        "offers": "Ofertas",
-        "news": "Noticias",
-        "app_name": "Line Game",
-        "app_subtitle": "Tu centro deportivo",
-        "main_section": "Principal",
-        "settings_section": "Ajustes",
-        "security_policy": "Política de seguridad"
+  "version": "3.0.0",
+  "locale": "mx",
+  "nav": {
+    "home": "Inicio",
+    "matches": "Partidos",
+    "offers": "Ofertas",
+    "news": "Noticias",
+    "app_name": "Line Game",
+    "app_subtitle": "Tu centro deportivo",
+    "main_section": "Principal",
+    "settings_section": "Ajustes",
+    "security_policy": "Política de seguridad"
+  },
+  "sports": {
+    "football": "Fútbol",
+    "basketball": "Baloncesto",
+    "tennis": "Tenis",
+    "hockey": "Hockey sobre hielo",
+    "esports": "eSports",
+    "voleybol": "Voleibol"
+  },
+  "fallback": {
+    "retry_button": "Reintentar",
+    "no_connection": {
+      "title": "Sin conexión",
+      "message": "Verifica tu conexión a internet e inténtalo de nuevo"
     },
-    "sports": {
-        "football": "Fútbol",
-        "basketball": "Baloncesto",
-        "tennis": "Tenis",
-        "hockey": "Hockey sobre hielo",
-        "esports": "eSports",
-        "voleybol": "Voleibol"
+    "server_error": {
+      "title": "Algo salió mal",
+      "message": "Error del servidor. Intenta más tarde"
     },
-    "fallback": {
-        "retry_button": "Reintentar",
-        "no_connection": {
-            "title": "Sin conexión",
-            "message": "Verifica tu conexión a internet e inténtalo de nuevo"
-        },
-        "server_error": {
-            "title": "Algo salió mal",
-            "message": "Error del servidor. Intenta más tarde"
-        },
-        "not_found": {
-            "title": "Página no encontrada",
-            "message": "Esta página no existe"
-        },
-        "maintenance": {
-            "title": "En mantenimiento",
-            "message": "Volveremos pronto. Intenta más tarde"
-        },
-        "empty_state": {
-            "title": "Nada aquí aún",
-            "message": "Contenido no disponible por el momento"
-        },
-        "page_limit": {
-            "title": "Límite alcanzado",
-            "message": "Has alcanzado el límite de páginas"
-        },
-        "init_failed": {
-            "title": "No se puede iniciar",
-            "message": "Error al cargar la configuración. Verifica tu conexión"
-        },
-        "unsupported": {
-            "title": "Actualización requerida",
-            "message": "Esta versión ya no es compatible. Actualiza la aplicación",
-            "button": "Actualizar",
-            "update_url": "https://play.google.com/store/apps/details?id=com.linegame2.app"
-        }
+    "not_found": {
+      "title": "Página no encontrada",
+      "message": "Esta página no existe"
     },
-    "splash": {
-        "title": "Line Game",
-        "logo_url": "https://s3.regru.cloud/line-game-img/odds/images/logo.svg"
+    "maintenance": {
+      "title": "En mantenimiento",
+      "message": "Volveremos pronto. Intenta más tarde"
     },
-    "home": {
-        "title": "Inicio"
+    "empty_state": {
+      "title": "Nada aquí aún",
+      "message": "Contenido no disponible por el momento"
     },
-    "matches": {
-        "title": "Partidos"
+    "page_limit": {
+      "title": "Límite alcanzado",
+      "message": "Has alcanzado el límite de páginas"
     },
-    "offers": {
-        "title": "Ofertas"
+    "init_failed": {
+      "title": "No se puede iniciar",
+      "message": "Error al cargar la configuración. Verifica tu conexión"
     },
-    "news": {
-        "title": "Noticias"
+    "unsupported": {
+      "title": "Actualización requerida",
+      "message": "Esta versión ya no es compatible. Actualiza la aplicación",
+      "button": "Actualizar",
+      "update_url": "https://play.google.com/store/apps/details?id=com.linegame2.app"
     }
+  },
+  "splash": {
+    "title": "Line Game",
+    "logo_url": "https://s3.regru.cloud/line-game-img/odds/images/logo.svg"
+  },
+  "home": {
+    "title": "Inicio"
+  },
+  "matches": {
+    "title": "Partidos"
+  },
+  "offers": {
+    "title": "Ofertas",
+    "rating_label": "Clasificación: {{rating}}/5",
+    "button_play": "Jugar ahora"
+  },
+  "news": {
+    "title": "Noticias",
+    "time": {
+      "just_now": "Ahora",
+      "minutes_ago": "hace {n} min",
+      "hours_ago": "hace {n} h",
+      "days_ago": "hace {n} días"
+    }
+  },
+  "leagues": {
+    "epl": "Premier League",
+    "laliga": "La Liga",
+    "seriea": "Serie A",
+    "bundesliga": "Bundesliga",
+    "ligue1": "Ligue 1",
+    "rpl": "RPL",
+    "liga_mx": "Liga MX",
+    "concachampions": "Concachampions",
+    "nba": "NBA",
+    "euroleague": "Euroleague",
+    "vtb": "VTB",
+    "nhl": "NHL",
+    "khl": "KHL",
+    "other": "Otro"
+  }
 }

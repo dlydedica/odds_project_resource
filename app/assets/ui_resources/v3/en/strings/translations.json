@@ -1,76 +1,100 @@
 {
-    "version": "3.0.0",
-    "locale": "en",
-    "nav": {
-        "home": "Home",
-        "matches": "Matches",
-        "offers": "Offers",
-        "news": "News",
-        "app_name": "Line Game",
-        "app_subtitle": "Your sports hub",
-        "main_section": "Main",
-        "settings_section": "Settings",
-        "security_policy": "Security Policy"
+  "version": "3.0.0",
+  "locale": "en",
+  "nav": {
+    "home": "Home",
+    "matches": "Matches",
+    "offers": "Offers",
+    "news": "News",
+    "app_name": "Line Game",
+    "app_subtitle": "Your sports hub",
+    "main_section": "Main",
+    "settings_section": "Settings",
+    "security_policy": "Security Policy"
+  },
+  "sports": {
+    "football": "Football",
+    "basketball": "Basketball",
+    "tennis": "Tennis",
+    "hockey": "Ice Hockey",
+    "esports": "eSports",
+    "voleybol": "Volleyball"
+  },
+  "fallback": {
+    "retry_button": "Try Again",
+    "no_connection": {
+      "title": "No Connection",
+      "message": "Please check your internet connection and try again"
     },
-    "sports": {
-        "football": "Football",
-        "basketball": "Basketball",
-        "tennis": "Tennis",
-        "hockey": "Ice Hockey",
-        "esports": "eSports",
-        "voleybol": "Volleyball"
+    "server_error": {
+      "title": "Something went wrong",
+      "message": "Server error. Please try again later"
     },
-    "fallback": {
-        "retry_button": "Try Again",
-        "no_connection": {
-            "title": "No Connection",
-            "message": "Please check your internet connection and try again"
-        },
-        "server_error": {
-            "title": "Something went wrong",
-            "message": "Server error. Please try again later"
-        },
-        "not_found": {
-            "title": "Page not found",
-            "message": "This page doesn't exist"
-        },
-        "maintenance": {
-            "title": "Under maintenance",
-            "message": "We'll be back soon. Please try again later"
-        },
-        "empty_state": {
-            "title": "Nothing here yet",
-            "message": "No content available at the moment"
-        },
-        "page_limit": {
-            "title": "Limit reached",
-            "message": "You've reached the page limit"
-        },
-        "init_failed": {
-            "title": "Can't start",
-            "message": "Failed to load initial configuration. Please check your connection"
-        },
-        "unsupported": {
-            "title": "Update required",
-            "message": "This version is no longer supported. Please update the app",
-            "button": "Update",
-            "update_url": "https://play.google.com/store/apps/details?id=com.linegame2.app"
-        }
+    "not_found": {
+      "title": "Page not found",
+      "message": "This page doesn't exist"
     },
-    "splash": {
-        "title": "Line Game",
-        "logo_url": "https://s3.regru.cloud/line-game-img/odds/images/logo.svg"
+    "maintenance": {
+      "title": "Under maintenance",
+      "message": "We'll be back soon. Please try again later"
     },
-    "home": {
-        "title": "Home"
+    "empty_state": {
+      "title": "Nothing here yet",
+      "message": "No content available at the moment"
     },
-    "matches": {
-        "title": "Matches"
+    "page_limit": {
+      "title": "Limit reached",
+      "message": "You've reached the page limit"
     },
-    "offers": {
-        "title": "Offers"
+    "init_failed": {
+      "title": "Can't start",
+      "message": "Failed to load initial configuration. Please check your connection"
     },
-    "news": {
-        "title": "News"
+    "unsupported": {
+      "title": "Update required",
+      "message": "This version is no longer supported. Please update the app",
+      "button": "Update",
+      "update_url": "https://play.google.com/store/apps/details?id=com.linegame2.app"
     }
+  },
+  "splash": {
+    "title": "Line Game",
+    "logo_url": "https://s3.regru.cloud/line-game-img/odds/images/logo.svg"
+  },
+  "home": {
+    "title": "Home"
+  },
+  "matches": {
+    "title": "Matches"
+  },
+  "offers": {
+    "title": "Offers",
+    "rating_label": "Rating: {{rating}}/5",
+    "button_play": "Play now"
+  },
+  "news": {
+    "title": "News",
+    "time": {
+      "just_now": "Just now",
+      "minutes_ago": "{n} min ago",
+      "hours_ago": "{n} h ago",
+      "days_ago": "{n} d ago"
+    }
+  },
+  "leagues": {
+    "epl": "Premier League",
+    "laliga": "La Liga",
+    "seriea": "Serie A",
+    "bundesliga": "Bundesliga",
+    "ligue1": "Ligue 1",
+    "rpl": "RPL",
+    "liga_mx": "Liga MX",
+    "concachampions": "Concachampions",
+    "nba": "NBA",
+    "euroleague": "Euroleague",
+    "vtb": "VTB",
+    "nhl": "NHL",
+    "khl": "KHL",
+    "other": "Other"
+  }
 }
