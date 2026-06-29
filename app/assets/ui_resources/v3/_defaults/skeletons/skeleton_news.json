@@ -1,0 +1,142 @@
+{
+    "type": "column",
+    "children": [
+        {
+            "type": "shimmer_block",
+            "height": 24,
+            "width": "30%",
+            "borderRadius": 4,
+            "margin": {
+                "bottom": 16
+            }
+        },
+        {
+            "type": "row",
+            "spacing": 12,
+            "margin": {
+                "bottom": 12
+            },
+            "children": [
+                {
+                    "type": "shimmer_block",
+                    "height": 90,
+                    "width": 90,
+                    "borderRadius": 10
+                },
+                {
+                    "type": "column",
+                    "spacing": 6,
+                    "children": [
+                        {
+                            "type": "shimmer_block",
+                            "height": 14,
+                            "width": 180,
+                            "borderRadius": 4
+                        },
+                        {
+                            "type": "shimmer_block",
+                            "height": 12,
+                            "width": 240,
+                            "borderRadius": 4
+                        },
+                        {
+                            "type": "shimmer_block",
+                            "height": 12,
+                            "width": 120,
+                            "borderRadius": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "shimmer_block",
+            "height": 1,
+            "margin": {
+                "bottom": 12
+            }
+        },
+        {
+            "type": "row",
+            "spacing": 12,
+            "margin": {
+                "bottom": 12
+            },
+            "children": [
+                {
+                    "type": "shimmer_block",
+                    "height": 90,
+                    "width": 90,
+                    "borderRadius": 10
+                },
+                {
+                    "type": "column",
+                    "spacing": 6,
+                    "children": [
+                        {
+                            "type": "shimmer_block",
+                            "height": 14,
+                            "width": 180,
+                            "borderRadius": 4
+                        },
+                        {
+                            "type": "shimmer_block",
+                            "height": 12,
+                            "width": 240,
+                            "borderRadius": 4
+                        },
+                        {
+                            "type": "shimmer_block",
+                            "height": 12,
+                            "width": 120,
+                            "borderRadius": 4
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "shimmer_block",
+            "height": 1,
+            "margin": {
+                "bottom": 12
+            }
+        },
+        {
+            "type": "row",
+            "spacing": 12,
+            "children": [
+                {
+                    "type": "shimmer_block",
+                    "height": 90,
+                    "width": 90,
+                    "borderRadius": 10
+                },
+                {
+                    "type": "column",
+                    "spacing": 6,
+                    "children": [
+                        {
+                            "type": "shimmer_block",
+                            "height": 14,
+                            "width": 180,
+                            "borderRadius": 4
+                        },
+                        {
+                            "type": "shimmer_block",
+                            "height": 12,
+                            "width": 240,
+                            "borderRadius": 4
+                        },
+                        {
+                            "type": "shimmer_block",
+                            "height": 12,
+                            "width": 120,
+                            "borderRadius": 4
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

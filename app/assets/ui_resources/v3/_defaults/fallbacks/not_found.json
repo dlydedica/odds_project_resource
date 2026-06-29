@@ -1,0 +1,41 @@
+{
+    "type": "column",
+    "mainAxisAlignment": "center",
+    "crossAxisAlignment": "center",
+    "children": [
+        {
+            "type": "icon",
+            "icon": "search_off",
+            "size": 64,
+            "color": "{{token.text_secondary}}"
+        },
+        {
+            "type": "sizedBox",
+            "height": 20
+        },
+        {
+            "type": "text",
+            "data": "{{t:fallback.not_found.title}}",
+            "style": {
+                "fontFamily": "Roboto",
+                "fontSize": 20,
+                "fontWeight": "w700",
+                "color": "{{token.text_primary}}"
+            }
+        },
+        {
+            "type": "sizedBox",
+            "height": 8
+        },
+        {
+            "type": "text",
+            "data": "{{t:fallback.not_found.message}}",
+            "style": {
+                "fontFamily": "Roboto",
+                "fontSize": 14,
+                "fontWeight": "w400",
+                "color": "{{token.text_secondary}}"
+            }
+        }
+    ]
+}

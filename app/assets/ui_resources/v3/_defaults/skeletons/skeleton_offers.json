@@ -1,0 +1,38 @@
+{
+    "type": "column",
+    "children": [
+        {
+            "type": "shimmer_block",
+            "height": 24,
+            "width": "30%",
+            "borderRadius": 4,
+            "margin": {
+                "bottom": 16
+            }
+        },
+        {
+            "type": "shimmer_block",
+            "height": 140,
+            "borderRadius": 14,
+            "margin": {
+                "bottom": 12
+            }
+        },
+        {
+            "type": "shimmer_block",
+            "height": 140,
+            "borderRadius": 14,
+            "margin": {
+                "bottom": 12
+            }
+        },
+        {
+            "type": "shimmer_block",
+            "height": 140,
+            "borderRadius": 14,
+            "margin": {
+                "bottom": 12
+            }
+        }
+    ]
+}

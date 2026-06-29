@@ -1,0 +1,118 @@
+{
+    "version": "3.0.0",
+    "feeds": [
+        {
+            "feed_id": "matches-football",
+            "type": "openapi_proxy",
+            "api": {
+                "base_url": "https://app.line-game.name",
+                "list": "/v4/events?sports=football&leagues={leagues}&lang={locale}",
+                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+            },
+            "mapping": {
+                "event_uid": "id",
+                "sport.key": "sport_key",
+                "competition.key": "league_key",
+                "competition.name": "competition_name",
+                "participants.home.name": "team_home_name",
+                "participants.home.logo_url": "team_home_logo",
+                "participants.away.name": "team_away_name",
+                "participants.away.logo_url": "team_away_logo",
+                "score.home": "team_home_score",
+                "score.away": "team_away_score",
+                "period.time": "match_time",
+                "status": "status"
+            },
+            "cache_ttl_seconds": 10
+        },
+        {
+            "feed_id": "matches-basketball",
+            "type": "openapi_proxy",
+            "api": {
+                "base_url": "https://app.line-game.name",
+                "list": "/v4/events?sports=basketball&leagues={leagues}&lang={locale}",
+                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+            },
+            "mapping": {
+                "event_uid": "id",
+                "sport.key": "sport_key",
+                "competition.key": "league_key",
+                "competition.name": "competition_name",
+                "participants.home.name": "team_home_name",
+                "participants.away.name": "team_away_name",
+                "score.home": "team_home_score",
+                "score.away": "team_away_score",
+                "status": "status"
+            },
+            "cache_ttl_seconds": 10
+        },
+        {
+            "feed_id": "matches-tennis",
+            "type": "openapi_proxy",
+            "api": {
+                "base_url": "https://app.line-game.name",
+                "list": "/v4/events?sports=tennis&leagues={leagues}&lang={locale}",
+                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+            },
+            "mapping": {
+                "event_uid": "id",
+                "sport.key": "sport_key",
+                "competition.key": "league_key",
+                "participants.home.name": "team_home_name",
+                "participants.away.name": "team_away_name",
+                "score.home": "team_home_score",
+                "score.away": "team_away_score",
+                "status": "status"
+            },
+            "cache_ttl_seconds": 10
+        },
+        {
+            "feed_id": "matches-hockey",
+            "type": "openapi_proxy",
+            "api": {
+                "base_url": "https://app.line-game.name",
+                "list": "/v4/events?sports=hockey&leagues={leagues}&lang={locale}",
+                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+            },
+            "mapping": {
+                "event_uid": "id",
+                "sport.key": "sport_key",
+                "competition.key": "league_key",
+                "participants.home.name": "team_home_name",
+                "participants.away.name": "team_away_name",
+                "score.home": "team_home_score",
+                "score.away": "team_away_score",
+                "status": "status"
+            },
+            "cache_ttl_seconds": 10
+        },
+        {
+            "feed_id": "matches-esports",
+            "type": "openapi_proxy",
+            "api": {
+                "base_url": "https://app.line-game.name",
+                "list": "/v4/events?sports=esports&leagues={leagues}&lang={locale}",
+                "polling": "/v4/events/polling?last_revision={revision}&lang={locale}"
+            },
+            "mapping": {
+                "event_uid": "id",
+                "sport.key": "sport_key",
+                "competition.key": "league_key",
+                "participants.home.name": "team_home_name",
+                "participants.away.name": "team_away_name",
+                "score.home": "team_home_score",
+                "score.away": "team_away_score",
+                "status": "status"
+            },
+            "cache_ttl_seconds": 10
+        },
+        {
+            "feed_id": "news-rss-main",
+            "type": "rss_proxy",
+            "api": {
+                "endpoints_key": "rss_sources"
+            },
+            "cache_ttl_seconds": 300
+        }
+    ]
+}

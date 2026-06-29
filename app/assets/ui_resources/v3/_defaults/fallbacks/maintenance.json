@@ -1,0 +1,42 @@
+{
+    "type": "column",
+    "mainAxisAlignment": "center",
+    "crossAxisAlignment": "center",
+    "children": [
+        {
+            "type": "icon",
+            "icon": "construction",
+            "size": 64,
+            "color": "{{token.accent}}"
+        },
+        {
+            "type": "sizedBox",
+            "height": 20
+        },
+        {
+            "type": "text",
+            "data": "{{t:fallback.maintenance.title}}",
+            "style": {
+                "fontFamily": "Roboto",
+                "fontSize": 20,
+                "fontWeight": "w700",
+                "color": "{{token.text_primary}}"
+            }
+        },
+        {
+            "type": "sizedBox",
+            "height": 8
+        },
+        {
+            "type": "text",
+            "data": "{{t:fallback.maintenance.message}}",
+            "textAlign": "center",
+            "style": {
+                "fontFamily": "Roboto",
+                "fontSize": 14,
+                "fontWeight": "w400",
+                "color": "{{token.text_secondary}}"
+            }
+        }
+    ]
+}

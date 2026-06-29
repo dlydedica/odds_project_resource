@@ -1,0 +1,42 @@
+{
+    "type": "topMenu",
+    "style": "scrollable",
+    "items": [
+        {
+            "id": "football",
+            "icon": "sports_soccer",
+            "label": "{{t:sports.football}}",
+            "action": "app://inApp?page=matches/football"
+        },
+        {
+            "id": "basketball",
+            "icon": "sports_basketball",
+            "label": "{{t:sports.basketball}}",
+            "action": "app://inApp?page=matches/basketball"
+        },
+        {
+            "id": "tennis",
+            "icon": "sports_tennis",
+            "label": "{{t:sports.tennis}}",
+            "action": "app://inApp?page=matches/tennis"
+        },
+        {
+            "id": "hockey",
+            "icon": "sports_hockey",
+            "label": "{{t:sports.hockey}}",
+            "action": "app://inApp?page=matches/hockey"
+        },
+        {
+            "id": "esports",
+            "icon": "sports_esports",
+            "label": "{{t:sports.esports}}",
+            "action": "app://inApp?page=matches/esports"
+        },
+        {
+            "id": "voleybol",
+            "icon": "sports_volleyball",
+            "label": "{{t:sports.voleybol}}",
+            "action": "app://inApp?page=matches/voleybol"
+        }
+    ]
+}

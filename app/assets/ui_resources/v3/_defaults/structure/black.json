@@ -1,0 +1,33 @@
+{
+    "type": "appShell",
+    "schema_version": "3.0.0",
+    "tabs": [
+        {
+            "id": "tab-home",
+            "icon": "home",
+            "title": "{{t:nav.home}}",
+            "screen": {
+                "type": "home",
+                "route": "home"
+            }
+        },
+        {
+            "id": "tab-matches",
+            "icon": "sports_soccer",
+            "title": "{{t:nav.matches}}",
+            "screen": {
+                "type": "matches",
+                "route": "matches"
+            }
+        },
+        {
+            "id": "tab-news",
+            "icon": "article",
+            "title": "{{t:nav.news}}",
+            "screen": {
+                "type": "news",
+                "route": "news"
+            }
+        }
+    ]
+}

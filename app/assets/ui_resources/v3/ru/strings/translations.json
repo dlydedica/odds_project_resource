@@ -1,0 +1,76 @@
+{
+    "version": "3.0.0",
+    "locale": "ru",
+    "nav": {
+        "home": "Главная",
+        "matches": "Матчи",
+        "offers": "Офферы",
+        "news": "Новости",
+        "app_name": "Line Game",
+        "app_subtitle": "Спортивный центр",
+        "main_section": "Основное",
+        "settings_section": "Настройки",
+        "security_policy": "Политика безопасности"
+    },
+    "sports": {
+        "football": "Футбол",
+        "basketball": "Баскетбол",
+        "tennis": "Теннис",
+        "hockey": "Хоккей",
+        "esports": "Киберспорт",
+        "voleybol": "Волейбол"
+    },
+    "fallback": {
+        "retry_button": "Повторить",
+        "no_connection": {
+            "title": "Нет соединения",
+            "message": "Проверьте интернет-соединение и попробуйте снова"
+        },
+        "server_error": {
+            "title": "Что-то пошло не так",
+            "message": "Ошибка сервера. Попробуйте позже"
+        },
+        "not_found": {
+            "title": "Страница не найдена",
+            "message": "Такой страницы не существует"
+        },
+        "maintenance": {
+            "title": "Ведутся работы",
+            "message": "Скоро вернёмся. Попробуйте позже"
+        },
+        "empty_state": {
+            "title": "Здесь пока ничего нет",
+            "message": "Контент временно недоступен"
+        },
+        "page_limit": {
+            "title": "Лимит исчерпан",
+            "message": "Вы достигли лимита страниц"
+        },
+        "init_failed": {
+            "title": "Не удалось запуститься",
+            "message": "Не удалось загрузить конфигурацию. Проверьте соединение"
+        },
+        "unsupported": {
+            "title": "Требуется обновление",
+            "message": "Эта версия больше не поддерживается. Обновите приложение",
+            "button": "Обновить",
+            "update_url": "https://play.google.com/store/apps/details?id=com.linegame2.app"
+        }
+    },
+    "splash": {
+        "title": "Line Game",
+        "logo_url": "https://s3.regru.cloud/line-game-img/odds/images/logo.svg"
+    },
+    "home": {
+        "title": "Главная"
+    },
+    "matches": {
+        "title": "Матчи"
+    },
+    "offers": {
+        "title": "Офферы"
+    },
+    "news": {
+        "title": "Новости"
+    }
+}

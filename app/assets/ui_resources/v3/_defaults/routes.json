@@ -1,0 +1,29 @@
+{
+    "version": "3.0.0",
+    "routes": {
+        "home": "/v3/mobile/page/home",
+        "matches": "/v3/mobile/page/matches",
+        "matches/football": "/v3/mobile/page/matches/football",
+        "matches/basketball": "/v3/mobile/page/matches/basketball",
+        "matches/tennis": "/v3/mobile/page/matches/tennis",
+        "matches/hockey": "/v3/mobile/page/matches/hockey",
+        "matches/esports": "/v3/mobile/page/matches/esports",
+        "matches/voleybol": "/v3/mobile/page/matches/voleybol",
+        "offers": "/v3/mobile/page/offers",
+        "news": "/v3/mobile/page/news",
+        "news/detail": "/v3/mobile/page/news/{id}"
+    },
+    "levels": {
+        "home": 0,
+        "matches": 1,
+        "football": 2,
+        "basketball": 2,
+        "tennis": 2,
+        "hockey": 2,
+        "esports": 2,
+        "voleybol": 2,
+        "offers": 0,
+        "news": 1,
+        "news_detail": 2
+    }
+}

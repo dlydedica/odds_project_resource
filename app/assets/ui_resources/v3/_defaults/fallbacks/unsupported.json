@@ -1,0 +1,72 @@
+{
+    "type": "column",
+    "mainAxisAlignment": "center",
+    "crossAxisAlignment": "center",
+    "children": [
+        {
+            "type": "icon",
+            "icon": "system_update",
+            "size": 64,
+            "color": "{{token.accent}}"
+        },
+        {
+            "type": "sizedBox",
+            "height": 20
+        },
+        {
+            "type": "text",
+            "data": "{{t:fallback.unsupported.title}}",
+            "style": {
+                "fontFamily": "Roboto",
+                "fontSize": 20,
+                "fontWeight": "w700",
+                "color": "{{token.text_primary}}"
+            }
+        },
+        {
+            "type": "sizedBox",
+            "height": 8
+        },
+        {
+            "type": "text",
+            "data": "{{t:fallback.unsupported.message}}",
+            "style": {
+                "fontFamily": "Roboto",
+                "fontSize": 14,
+                "fontWeight": "w400",
+                "color": "{{token.text_secondary}}"
+            }
+        },
+        {
+            "type": "sizedBox",
+            "height": 24
+        },
+        {
+            "type": "inAppLinkContainer",
+            "link": "app://openUrl?url={{t:fallback.unsupported.update_url}}",
+            "child": {
+                "type": "container",
+                "padding": [
+                    20,
+                    12,
+                    20,
+                    12
+                ],
+                "decoration": {
+                    "color": "{{token.accent}}",
+                    "borderRadius": {{token.radius_button}}
+                },
+                "child": {
+                    "type": "text",
+                    "data": "{{t:fallback.unsupported.button}}",
+                    "style": {
+                        "fontFamily": "Roboto",
+                        "fontSize": 16,
+                        "fontWeight": "w700",
+                        "color": "{{token.bg_light}}"
+                    }
+                }
+            }
+        }
+    ]
+}

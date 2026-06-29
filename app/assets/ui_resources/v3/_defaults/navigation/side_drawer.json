@@ -1,0 +1,40 @@
+{
+    "type": "drawer",
+    "header": {
+        "type": "user_card",
+        "title": "{{t:nav.app_name}}",
+        "subtitle": "{{t:nav.app_subtitle}}"
+    },
+    "sections": [
+        {
+            "title": "{{t:nav.main_section}}",
+            "items": [
+                {
+                    "icon": "home",
+                    "label": "{{t:nav.home}}",
+                    "action": "app://inApp?page=home"
+                },
+                {
+                    "icon": "sports_soccer",
+                    "label": "{{t:nav.matches}}",
+                    "action": "app://inApp?page=matches"
+                },
+                {
+                    "icon": "article",
+                    "label": "{{t:nav.news}}",
+                    "action": "app://inApp?page=news"
+                }
+            ]
+        },
+        {
+            "title": "{{t:nav.settings_section}}",
+            "items": [
+                {
+                    "icon": "privacy_tip",
+                    "label": "{{t:nav.security_policy}}",
+                    "action": "app://openUrl?url=https://docs.google.com/document/d/11p2HiPs1Rmr-P5_ltaPLKGLU6fl98EMWUbbao6WUv0c"
+                }
+            ]
+        }
+    ]
+}

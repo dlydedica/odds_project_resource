@@ -1,0 +1,44 @@
+{
+    "type": "column",
+    "mainAxisAlignment": "center",
+    "crossAxisAlignment": "center",
+    "children": [
+        {
+            "type": "image",
+            "src": "{{t:splash.logo_url}}",
+            "imageType": "network",
+            "width": 120,
+            "height": 120,
+            "fit": "contain"
+        },
+        {
+            "type": "sizedBox",
+            "height": 24
+        },
+        {
+            "type": "text",
+            "data": "{{t:splash.title}}",
+            "style": {
+                "fontFamily": "Roboto",
+                "fontSize": 24,
+                "fontWeight": "w700",
+                "color": "{{token.text_primary}}"
+            }
+        },
+        {
+            "type": "sizedBox",
+            "height": 32
+        },
+        {
+            "type": "container",
+            "width": 24,
+            "height": 24,
+            "child": {
+                "type": "image",
+                "src": "https://s3.regru.cloud/line-game-img/odds/images/loader.svg",
+                "imageType": "network",
+                "fit": "contain"
+            }
+        }
+    ]
+}

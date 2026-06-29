@@ -1,0 +1,40 @@
+{
+    "type": "bottomNavigation",
+    "items": [
+        {
+            "id": "tab-home",
+            "icon": "home",
+            "active_icon": "home_filled",
+            "label": "{{t:nav.home}}",
+            "action": "app://inApp?page=home"
+        },
+        {
+            "id": "tab-matches",
+            "icon": "sports_soccer",
+            "active_icon": "sports_soccer",
+            "label": "{{t:nav.matches}}",
+            "action": "app://inApp?page=matches"
+        },
+        {
+            "id": "tab-offers",
+            "icon": "confirmation_number",
+            "active_icon": "confirmation_number",
+            "label": "{{t:nav.offers}}",
+            "action": "app://inApp?page=offers"
+        },
+        {
+            "id": "tab-news",
+            "icon": "article",
+            "active_icon": "article",
+            "label": "{{t:nav.news}}",
+            "action": "app://inApp?page=news"
+        }
+    ],
+    "behavior": {
+        "show_labels": true,
+        "type": "fixed",
+        "selected_icon_tint": "{{token.accent}}",
+        "unselected_icon_tint": "{{token.text_tertiary}}",
+        "background_color": "{{token.bg_light}}"
+    }
+}
