@@ -3,7 +3,7 @@
     "children": [
         {
             "type": "shimmer_block",
-            "height": {{token.spacing_xxl}},
+            "height": "{{token.spacing_xxl}}",
             "width": "30%",
             "borderRadius": 4,
             "margin": {
@@ -21,7 +21,7 @@
                     "type": "shimmer_block",
                     "height": 90,
                     "width": 90,
-                    "borderRadius": {{token.radius_thumbnail}}
+                    "borderRadius": "{{token.radius_thumbnail}}"
                 },
                 {
                     "type": "column",
@@ -42,7 +42,7 @@
                         {
                             "type": "shimmer_block",
                             "height": 12,
-                            "width": {{token.logo_size}},
+                            "width": "{{token.logo_size}}",
                             "borderRadius": 4
                         }
                     ]
@@ -67,7 +67,7 @@
                     "type": "shimmer_block",
                     "height": 90,
                     "width": 90,
-                    "borderRadius": {{token.radius_thumbnail}}
+                    "borderRadius": "{{token.radius_thumbnail}}"
                 },
                 {
                     "type": "column",
@@ -88,7 +88,7 @@
                         {
                             "type": "shimmer_block",
                             "height": 12,
-                            "width": {{token.logo_size}},
+                            "width": "{{token.logo_size}}",
                             "borderRadius": 4
                         }
                     ]
@@ -110,7 +110,7 @@
                     "type": "shimmer_block",
                     "height": 90,
                     "width": 90,
-                    "borderRadius": {{token.radius_thumbnail}}
+                    "borderRadius": "{{token.radius_thumbnail}}"
                 },
                 {
                     "type": "column",
@@ -131,7 +131,7 @@
                         {
                             "type": "shimmer_block",
                             "height": 12,
-                            "width": {{token.logo_size}},
+                            "width": "{{token.logo_size}}",
                             "borderRadius": 4
                         }
                     ]

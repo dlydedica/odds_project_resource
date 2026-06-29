@@ -3,7 +3,7 @@
     "children": [
         {
             "type": "shimmer_block",
-            "height": {{token.spacing_xxl}},
+            "height": "{{token.spacing_xxl}}",
             "width": "30%",
             "borderRadius": 4,
             "margin": {
@@ -13,7 +13,7 @@
         {
             "type": "shimmer_block",
             "height": 140,
-            "borderRadius": {{token.radius_card}},
+            "borderRadius": "{{token.radius_card}}",
             "margin": {
                 "bottom": 12
             }
@@ -21,7 +21,7 @@
         {
             "type": "shimmer_block",
             "height": 140,
-            "borderRadius": {{token.radius_card}},
+            "borderRadius": "{{token.radius_card}}",
             "margin": {
                 "bottom": 12
             }
@@ -29,7 +29,7 @@
         {
             "type": "shimmer_block",
             "height": 140,
-            "borderRadius": {{token.radius_card}},
+            "borderRadius": "{{token.radius_card}}",
             "margin": {
                 "bottom": 12
             }

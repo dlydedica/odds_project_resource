@@ -3,7 +3,7 @@
     "children": [
         {
             "type": "shimmer_block",
-            "height": {{token.spacing_xxl}},
+            "height": "{{token.spacing_xxl}}",
             "width": "40%",
             "borderRadius": 4,
             "margin": {
@@ -13,24 +13,24 @@
         },
         {
             "type": "shimmer_block",
-            "height": {{token.logo_size}},
-            "borderRadius": {{token.radius_card}},
+            "height": "{{token.logo_size}}",
+            "borderRadius": "{{token.radius_card}}",
             "margin": {
                 "bottom": 12
             }
         },
         {
             "type": "shimmer_block",
-            "height": {{token.logo_size}},
-            "borderRadius": {{token.radius_card}},
+            "height": "{{token.logo_size}}",
+            "borderRadius": "{{token.radius_card}}",
             "margin": {
                 "bottom": 12
             }
         },
         {
             "type": "shimmer_block",
-            "height": {{token.logo_size}},
-            "borderRadius": {{token.radius_card}},
+            "height": "{{token.logo_size}}",
+            "borderRadius": "{{token.radius_card}}",
             "margin": {
                 "bottom": 12
             }
@@ -39,7 +39,7 @@
             "type": "shimmer_block",
             "height": 40,
             "width": "30%",
-            "borderRadius": {{token.radius_button}},
+            "borderRadius": "{{token.radius_button}}",
             "margin": {
                 "bottom": 16,
                 "top": 8
@@ -48,7 +48,7 @@
         {
             "type": "shimmer_block",
             "height": 80,
-            "borderRadius": {{token.radius_block}},
+            "borderRadius": "{{token.radius_block}}",
             "margin": {
                 "bottom": 10
             }
@@ -56,7 +56,7 @@
         {
             "type": "shimmer_block",
             "height": 80,
-            "borderRadius": {{token.radius_block}},
+            "borderRadius": "{{token.radius_block}}",
             "margin": {
                 "bottom": 10
             }

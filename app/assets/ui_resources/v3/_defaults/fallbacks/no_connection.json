@@ -6,20 +6,20 @@
         {
             "type": "icon",
             "icon": "signal_wifi_off",
-            "size": {{token.icon_size_xl}},
+            "size": "{{token.icon_size_xl}}",
             "color": "{{token.accent}}"
         },
         {
             "type": "sizedBox",
-            "height": {{token.spacing_xl}}
+            "height": "{{token.spacing_xl}}"
         },
         {
             "type": "text",
             "data": "{{t:fallback.no_connection.title}}",
             "style": {
                 "fontFamily": "Roboto",
-                "fontSize": {{token.font_2xl}},
-                "fontWeight": {{token.font_bold}},
+                "fontSize": "{{token.font_2xl}}",
+                "fontWeight": "{{token.font_bold}}",
                 "color": "{{token.text_primary}}"
             }
         },
@@ -33,14 +33,14 @@
             "textAlign": "center",
             "style": {
                 "fontFamily": "Roboto",
-                "fontSize": :{{token.font_base}},
-                "fontWeight": {{token.font_normal}},
+                "fontSize": "{{token.font_base}}",
+                "fontWeight": "{{token.font_normal}}",
                 "color": "{{token.text_secondary}}"
             }
         },
         {
             "type": "sizedBox",
-            "height": {{token.spacing_xxl}}
+            "height": "{{token.spacing_xxl}}"
         },
         {
             "type": "inAppLinkContainer",
@@ -62,8 +62,8 @@
                     "data": "{{t:fallback.retry_button}}",
                     "style": {
                         "fontFamily": "Roboto",
-                        "fontSize": {{token.font_lg}},
-                        "fontWeight": {{token.font_bold}},
+                        "fontSize": "{{token.font_lg}}",
+                        "fontWeight": "{{token.font_bold}}",
                         "color": "{{token.bg_light}}"
                     }
                 }
