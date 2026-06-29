@@ -55,7 +55,7 @@
                 ],
                 "decoration": {
                     "color": "{{token.accent}}",
-                    "borderRadius": {{token.radius_button}}
+                    "borderRadius": "{{token.radius_button}}"
                 },
                 "child": {
                     "type": "text",
