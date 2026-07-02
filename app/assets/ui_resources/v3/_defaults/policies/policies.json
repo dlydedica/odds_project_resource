@@ -1,0 +1,67 @@
+{
+    "version": "1.0.0",
+    "description": "Политики для источников данных. Ресурс — обновляется через init.",
+    "policies": {
+        "__default__": {
+            "retryCount": 3,
+            "retryDelayMs": 2000,
+            "timeoutMs": 15000,
+            "skeletonAnimation": true,
+            "skeletonAnimationMs": 1200,
+            "pullToRefresh": true,
+            "autoRefreshMs": 0,
+            "cacheTtlSec": 300,
+            "staleWhileRevalidate": true,`r`n            "skeletonTimeoutMs": 30000,
+            "enabled": true,
+            "fallbackAction": "show_error"
+        },
+        "events.live": {
+            "retryCount": 5,
+            "retryDelayMs": 1000,
+            "timeoutMs": 10000,
+            "skeletonAnimation": true,
+            "skeletonAnimationMs": 800,
+            "pullToRefresh": false,
+            "autoRefreshMs": 15000,
+            "cacheTtlSec": 30,
+            "staleWhileRevalidate": true,`r`n            "skeletonTimeoutMs": 30000,
+            "enabled": true,
+            "fallbackAction": "use_cached"
+        },
+        "events.scores": {
+            "retryCount": 10,
+            "retryDelayMs": 500,
+            "timeoutMs": 30000,
+            "skeletonAnimation": false,
+            "pullToRefresh": false,
+            "autoRefreshMs": 5000,
+            "cacheTtlSec": 10,
+            "staleWhileRevalidate": true,`r`n            "skeletonTimeoutMs": 30000,
+            "enabled": true,
+            "fallbackAction": "show_empty"
+        },
+        "news.list": {
+            "retryCount": 2,
+            "retryDelayMs": 3000,
+            "timeoutMs": 10000,
+            "pullToRefresh": true,
+            "autoRefreshMs": 60000,
+            "cacheTtlSec": 600,
+            "staleWhileRevalidate": false,`r`n            "skeletonTimeoutMs": 30000,
+            "enabled": true,
+            "fallbackAction": "show_error"
+        },
+        "offers.list": {
+            "retryCount": 3,
+            "retryDelayMs": 2000,
+            "timeoutMs": 15000,
+            "pullToRefresh": true,
+            "autoRefreshMs": 120000,
+            "cacheTtlSec": 900,
+            "staleWhileRevalidate": true,`r`n            "skeletonTimeoutMs": 30000,
+            "enabled": true,
+            "fallbackAction": "use_cached"
+        }
+    }
+}
+

@@ -1,0 +1,31 @@
+{
+        "description": "Конфигурация источников данных. Мок для старта.",
+    "sources": {
+        "events.live": {
+            "type": "polling",
+            "params": {
+                "endpoint": "/v3/mobile/feed/poll",
+                "intervalSec": 15
+            }
+        },
+        "events.scores": {
+            "type": "sse",
+            "params": {
+                "endpoint": "/v3/mobile/events/stream"
+            }
+        },
+        "news.list": {
+            "type": "page",
+            "params": {
+                "path": "news"
+            }
+        },
+        "offers.list": {
+            "type": "page",
+            "params": {
+                "path": "offers"
+            }
+        }
+    }
+}
+

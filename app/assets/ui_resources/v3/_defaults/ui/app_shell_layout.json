@@ -1,0 +1,12 @@
+{
+    "version": "1.0.0",
+    "type": "scaffold",
+    "backgroundColor": "{{token.custom.surface.light}}",
+    "bottomNavigationBar": {
+        "type": "bottomNavigationBar",
+        "barType": "fixed",
+        "backgroundColor": "{{token.custom.surface.light}}",
+        "selectedItemColor": "{{token.primary}}",
+        "unselectedItemColor": ""
+    }
+}

@@ -1,0 +1,84 @@
+{
+    "version": "1.0.0",
+    "description": "Реестр действий. Мок для старта — сервер переопределит через init.",
+    "actions": {
+        "share_app": {
+            "type": "share",
+            "params": {
+                "text": "{{t.actions.share_text}}",
+                "url": "https://odds.app/download",
+                "subject": "Odds App"
+            }
+        },
+        "share_event": {
+            "type": "share",
+            "params": {
+                "text": "{{t.actions.share_event_text}}"
+            }
+        },
+        "contact_support": {
+            "type": "url",
+            "params": {
+                "url": "https://odds.app/support"
+            }
+        },
+        "open_website": {
+            "type": "url",
+            "params": {
+                "url": "https://odds.app"
+            }
+        },
+        "rate_app": {
+            "type": "rate",
+            "params": {
+                "appId": "com.odds.app"
+            }
+        },
+        "open_settings": {
+            "type": "appSettings",
+            "params": {}
+        },
+        "open_notification_settings": {
+            "type": "appSettings",
+            "params": {
+                "setting": "notification"
+            }
+        },
+        "open_location_settings": {
+            "type": "appSettings",
+            "params": {
+                "setting": "location"
+            }
+        },
+        "open_wifi_settings": {
+            "type": "appSettings",
+            "params": {
+                "setting": "wifi"
+            }
+        },
+        "open_bluetooth_settings": {
+            "type": "appSettings",
+            "params": {
+                "setting": "bluetooth"
+            }
+        },
+        "open_sound_settings": {
+            "type": "appSettings",
+            "params": {
+                "setting": "sound"
+            }
+        },
+        "open_storage_settings": {
+            "type": "appSettings",
+            "params": {
+                "setting": "storage"
+            }
+        },
+        "nearby_share": {
+            "type": "nearby",
+            "params": {
+                "text": "{{t.actions.share_text}}"
+            }
+        }
+    }
+}

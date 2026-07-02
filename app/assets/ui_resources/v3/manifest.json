@@ -1,0 +1,47 @@
+{
+    "version": "3.1.4",
+    "description": "Server v3 resource catalog — source of truth из resources submodule",
+    "resources": {
+        "translations": [
+            "ru",
+            "en",
+            "es"
+        ],
+        "actions": [
+            "actions"
+        ],
+        "data": [
+            "data_sources"
+        ],
+        "policies": [
+            "policies"
+        ],
+        "routing": [
+            "routes"
+        ],
+        "fallbacks": [
+            "splash",
+            "init_failed",
+            "unsupported",
+            "no_connection",
+            "server_error",
+            "maintenance"
+        ],
+        "skeletons": [
+            "skeleton_matches",
+            "skeleton_home",
+            "skeleton_news",
+            "skeleton_offers"
+        ],
+        "ui": [
+            "page_layout",
+            "app_shell_layout"
+        ],
+        "theme": [
+            "color_scheme"
+        ],
+        "feeds": [
+            "feeds_v3"
+        ]
+    }
+}
