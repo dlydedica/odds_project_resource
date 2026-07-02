@@ -1,5 +1,5 @@
 {
-    "version": "3.1.4",
+    "version": "3.1.5",
     "description": "Server v3 resource catalog — source of truth из resources submodule",
     "resources": {
         "translations": [
@@ -34,8 +34,7 @@
             "skeleton_offers"
         ],
         "ui": [
-            "page_layout",
-            "app_shell_layout"
+            "page_layout"
         ],
         "theme": [
             "color_scheme"

@@ -1,37 +1,145 @@
 {
+    "version": "1.0.0",
     "type": "column",
     "children": [
         {
-            "type": "shimmer_block",
-            "height": "{{token.spacing_xxl}}",
-            "width": "30%",
-            "borderRadius": 4,
-            "margin": {
-                "bottom": 16
-            }
-        },
-        {
-            "type": "shimmer_block",
-            "height": 140,
-            "borderRadius": "{{token.radius_card}}",
-            "margin": {
-                "bottom": 12
-            }
-        },
-        {
-            "type": "shimmer_block",
-            "height": 140,
-            "borderRadius": "{{token.radius_card}}",
-            "margin": {
-                "bottom": 12
-            }
-        },
-        {
-            "type": "shimmer_block",
-            "height": 140,
-            "borderRadius": "{{token.radius_card}}",
-            "margin": {
-                "bottom": 12
+            "type": "dataList",
+            "source": "offers.list",
+            "retryCount": 2,
+            "retryDelayMs": 2000,
+            "loading": {
+                "type": "column",
+                "children": [
+                    {
+                        "type": "shimmer_block",
+                        "height": 160,
+                        "borderRadius": "{{token.corner_radius.card}}",
+                        "margin": {
+                            "bottom": "{{token.spacing.sm}}"
+                        }
+                    },
+                    {
+                        "type": "shimmer_block",
+                        "height": 160,
+                        "borderRadius": "{{token.corner_radius.card}}",
+                        "margin": {
+                            "bottom": "{{token.spacing.sm}}"
+                        }
+                    }
+                ]
+            },
+            "empty": {
+                "type": "column",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "padding": {
+                    "vertical": 48
+                },
+                "children": [
+                    {
+                        "type": "icon",
+                        "icon": "local_offer",
+                        "size": 48,
+                        "color": "{{token.custom.on_surface_variant.light}}"
+                    },
+                    {
+                        "type": "sizedBox",
+                        "height": "{{token.spacing.md}}"
+                    },
+                    {
+                        "type": "text",
+                        "data": "{{t.offers.empty_title}}",
+                        "style": {
+                            "fontSize": "{{token.size.font.lg}}",
+                            "color": "{{token.custom.on_surface_variant.light}}"
+                        }
+                    }
+                ]
+            },
+            "error": {
+                "type": "column",
+                "mainAxisAlignment": "center",
+                "crossAxisAlignment": "center",
+                "padding": {
+                    "vertical": 48
+                },
+                "children": [
+                    {
+                        "type": "text",
+                        "data": "{{t.fallback.load_error}}",
+                        "style": {
+                            "color": "{{token.custom.on_surface_variant.light}}",
+                            "fontSize": "{{token.size.font.md}}"
+                        }
+                    }
+                ]
+            },
+            "itemTemplate": {
+                "type": "container",
+                "padding": {
+                    "all": "{{token.spacing.md}}"
+                },
+                "decoration": {
+                    "color": "{{token.custom.surface_container.light}}",
+                    "borderRadius": "{{token.corner_radius.card}}",
+                    "border": {
+                        "type": "all",
+                        "color": "{{token.custom.outline_variant.light}}",
+                        "width": 1
+                    }
+                },
+                "margin": {
+                    "bottom": "{{token.spacing.sm}}"
+                },
+                "child": {
+                    "type": "column",
+                    "spacing": "{{token.spacing.sm}}",
+                    "crossAxisAlignment": "start",
+                    "children": [
+                        {
+                            "type": "text",
+                            "data": "{{item.title}}",
+                            "style": {
+                                "fontSize": "{{token.size.font.lg}}",
+                                "fontWeight": "{{token.typography.fontWeight.bold}}",
+                                "color": "{{token.custom.on_surface.light}}"
+                            }
+                        },
+                        {
+                            "type": "text",
+                            "data": "{{item.description}}",
+                            "style": {
+                                "fontSize": "{{token.size.font.sm}}",
+                                "color": "{{token.custom.on_surface_variant.light}}"
+                            },
+                            "maxLines": 3
+                        },
+                        {
+                            "type": "sizedBox",
+                            "height": "{{token.spacing.xs}}"
+                        },
+                        {
+                            "type": "container",
+                            "padding": {
+                                "horizontal": "{{token.spacing.lg}}",
+                                "vertical": "{{token.spacing.sm}}"
+                            },
+                            "decoration": {
+                                "color": "{{token.primary}}",
+                                "borderRadius": "{{token.corner_radius.full}}"
+                            },
+                            "child": {
+                                "type": "text",
+                                "data": "{{t.offers.get_bonus}}",
+                                "style": {
+                                    "fontSize": "{{token.size.font.sm}}",
+                                    "fontWeight": "{{token.typography.fontWeight.bold}}",
+                                    "color": "{{token.custom.surface.light}}"
+                                }
+                            }
+                        }
+                    ]
+                }
             }
         }
     ]
