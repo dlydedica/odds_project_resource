@@ -2,22 +2,7 @@
     "version": "1.0.0",
     "type": "scaffold",
     "backgroundColor": "{{token.custom.surface.light}}",
-    "appBar": {
-        "type": "appBar",
-        "title": {
-            "type": "text",
-            "data": "{{page.title}}",
-            "style": {
-                "fontSize": "{{token.size.font.lg}}",
-                "fontWeight": "{{token.typography.fontWeight.bold}}",
-                "color": "{{token.custom.on_surface.light}}"
-            }
-        },
-        "backgroundColor": "{{token.custom.surface.light}}",
-        "foregroundColor": "{{token.custom.on_surface.light}}",
-        "elevation": 0,
-        "centerTitle": true
-    },
+    "appBar": "{{page.appBar}}",
     "body": {
         "type": "safeArea",
         "child": {

@@ -1,0 +1,30 @@
+{
+    "version": "1.0.0",
+    "description": "Конфигурация табов для вкладки events",
+    "style": {
+        "isScrollable": true,
+        "tabAlignment": "start",
+        "labelColor": "{{token.primary}}",
+        "unselectedLabelColor": "#80{{token.custom.on_surface.light}}",
+        "indicatorColor": "{{token.primary}}",
+        "indicatorWeight": 3,
+        "labelStyle": {
+            "fontSize": 14,
+            "fontWeight": "bold"
+        }
+    },
+    "items": [
+        {
+            "id": "live",
+            "icon": "play_circle",
+            "iconSize": 20,
+            "showLabel": true
+        },
+        {
+            "id": "line",
+            "icon": "format_list_bulleted",
+            "iconSize": 20,
+            "showLabel": true
+        }
+    ]
+}

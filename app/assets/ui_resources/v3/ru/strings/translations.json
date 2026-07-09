@@ -1,16 +1,30 @@
 {
-  "version": "3.0.0",
+  "version": "3.1.0",
   "locale": "ru",
   "nav": {
     "home": "Главная",
-    "matches": "Матчи",
+    "events": "События",
     "offers": "Офферы",
     "news": "Новости",
     "app_name": "Line Game",
     "app_subtitle": "Спортивный центр",
     "main_section": "Основное",
     "settings_section": "Настройки",
-    "security_policy": "Политика безопасности"
+    "security_policy": "Политика безопасности",
+    "live": "Live",
+    "line": "Линия",
+    "back_tooltip": "На главную"
+  },
+  "tabs": {
+    "all": "Все",
+    "analytics": "Аналитика",
+    "interviews": "Интервью"
+  },
+  "drawer": {
+    "settings": "Настройки",
+    "about": "О приложении",
+    "share": "Поделиться",
+    "menu_tooltip": "Меню"
   },
   "sports": {
     "football": "Футбол",
@@ -70,10 +84,13 @@
   "offers": {
     "title": "Офферы",
     "rating_label": "Рейтинг: {{rating}}/5",
-    "button_play": "Играть"
+    "button_play": "Играть",
+    "get_bonus": "Получить бонус",
+    "empty_title": "Предложений пока нет"
   },
   "news": {
     "title": "Новости",
+    "search_hint": "Поиск новостей...",
     "time": {
       "just_now": "Только что",
       "minutes_ago": "{n} мин назад",
@@ -96,5 +113,9 @@
     "nhl": "НХЛ",
     "khl": "КХЛ",
     "other": "Другое"
+  },
+  "actions": {
+    "share_text": "Присоединяйся к Line Game — твой спортивный центр!",
+    "share_event_text": "Смотри этот матч в Line Game!"
   }
 }

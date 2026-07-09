@@ -1,0 +1,26 @@
+{
+    "version": "1.0.0",
+    "type": "appBar",
+    "title": {
+        "type": "text",
+        "data": "{{page.title}}",
+        "style": {
+            "fontSize": "{{token.size.font.lg}}",
+            "fontWeight": "{{token.typography.fontWeight.bold}}",
+            "color": "{{token.custom.on_surface.light}}"
+        }
+    },
+    "leading": {
+        "type": "iconButton",
+        "icon": {"type": "icon", "icon": "arrow_back"},
+        "onPressed": {
+            "actionType": "actionRef",
+            "ref": "navigate_home"
+        },
+        "tooltip": "{{t.nav.back_tooltip}}"
+    },
+    "backgroundColor": "{{token.custom.surface.light}}",
+    "foregroundColor": "{{token.custom.on_surface.light}}",
+    "elevation": 0,
+    "centerTitle": true
+}

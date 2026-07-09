@@ -1,19 +1,7 @@
 {
-    "description": "Конфигурация источников данных — версия сервера 3.1.5",
+    "version": "1.0.0",
+    "description": "Источники данных. Серверные endpoint'ы пока не реализованы — отключены для тишины.",
     "sources": {
-        "events.live": {
-            "type": "polling",
-            "params": {
-                "endpoint": "/v3/mobile/feed/poll",
-                "intervalSec": 30
-            }
-        },
-        "events.scores": {
-            "type": "sse",
-            "params": {
-                "endpoint": "/v3/mobile/events/stream"
-            }
-        },
         "news.list": {
             "type": "page",
             "params": {
@@ -25,12 +13,7 @@
             "params": {
                 "path": "offers"
             }
-        },
-        "server.resource.test": {
-            "type": "page",
-            "params": {
-                "path": "server_resource_test"
-            }
         }
     }
 }
+

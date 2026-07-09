@@ -1,16 +1,30 @@
 {
-  "version": "3.0.0",
+  "version": "3.1.0",
   "locale": "en",
   "nav": {
     "home": "Home",
-    "matches": "Matches",
+    "events": "Events",
     "offers": "Offers",
     "news": "News",
     "app_name": "Line Game",
     "app_subtitle": "Your sports hub",
     "main_section": "Main",
     "settings_section": "Settings",
-    "security_policy": "Security Policy"
+    "security_policy": "Security Policy",
+    "live": "Live",
+    "line": "Line",
+    "back_tooltip": "Back to home"
+  },
+  "tabs": {
+    "all": "All",
+    "analytics": "Analytics",
+    "interviews": "Interviews"
+  },
+  "drawer": {
+    "settings": "Settings",
+    "about": "About",
+    "share": "Share",
+    "menu_tooltip": "Menu"
   },
   "sports": {
     "football": "Football",
@@ -70,10 +84,13 @@
   "offers": {
     "title": "Offers",
     "rating_label": "Rating: {{rating}}/5",
-    "button_play": "Play now"
+    "button_play": "Play now",
+    "get_bonus": "Get bonus",
+    "empty_title": "No offers yet"
   },
   "news": {
     "title": "News",
+    "search_hint": "Search news...",
     "time": {
       "just_now": "Just now",
       "minutes_ago": "{n} min ago",
@@ -92,9 +109,13 @@
     "concachampions": "Concachampions",
     "nba": "NBA",
     "euroleague": "Euroleague",
-    "vtb": "VTB",
+    "vtb": "VTB United League",
     "nhl": "NHL",
     "khl": "KHL",
     "other": "Other"
+  },
+  "actions": {
+    "share_text": "Join Line Game — your sports hub!",
+    "share_event_text": "Watch this match on Line Game!"
   }
 }

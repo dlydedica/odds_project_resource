@@ -1,6 +1,6 @@
 {
-    "version": "3.1.5",
-    "description": "Server v3 resource catalog — source of truth из resources submodule",
+    "version": "3.2.0",
+    "description": "Canonical v3 resource bundle — 3 tabs with appBar, pageUi layouts, Stac features demo",
     "resources": {
         "translations": [
             "ru",
@@ -34,13 +34,17 @@
             "skeleton_offers"
         ],
         "ui": [
-            "page_layout"
+            "page_layout",
+            "events_page_layout",
+            "news_page_layout"
+        ],
+        "appbar": [
+            "home_appbar",
+            "events_appbar",
+            "news_appbar"
         ],
         "theme": [
             "color_scheme"
-        ],
-        "feeds": [
-            "feeds_v3"
         ]
     }
 }

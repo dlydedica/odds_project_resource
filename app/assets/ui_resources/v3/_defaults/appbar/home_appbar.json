@@ -1,0 +1,78 @@
+{
+    "version": "2.0.0",
+    "type": "appBar",
+    "title": {
+        "type": "text",
+        "data": "{{page.title}}",
+        "style": {
+            "fontSize": "{{token.size.font.lg}}",
+            "fontWeight": "{{token.typography.fontWeight.bold}}",
+            "color": "{{token.custom.on_surface.light}}"
+        }
+    },
+    "leading": {
+        "type": "iconButton",
+        "icon": {"type": "icon", "icon": "menu"},
+        "onPressed": {
+            "actionType": "showModalBottomSheet",
+            "widget": {
+                "type": "column",
+                "mainAxisSize": "min",
+                "children": [
+                    {
+                        "type": "listTile",
+                        "leading": {
+                            "type": "icon",
+                            "icon": "settings"
+                        },
+                        "title": {
+                            "type": "text",
+                            "data": "{{t.drawer.settings}}"
+                        },
+                        "onTap": {
+                            "actionType": "actionRef",
+                            "ref": "open_settings"
+                        }
+                    },
+                    {
+                        "type": "listTile",
+                        "leading": {
+                            "type": "icon",
+                            "icon": "info"
+                        },
+                        "title": {
+                            "type": "text",
+                            "data": "{{t.drawer.about}}"
+                        },
+                        "onTap": {
+                            "actionType": "actionRef",
+                            "ref": "navigate_home"
+                        }
+                    },
+                    {
+                        "type": "listTile",
+                        "leading": {
+                            "type": "icon",
+                            "icon": "share"
+                        },
+                        "title": {
+                            "type": "text",
+                            "data": "{{t.drawer.share}}"
+                        },
+                        "onTap": {
+                            "actionType": "actionRef",
+                            "ref": "share_app"
+                        }
+                    }
+                ]
+            },
+            "showDragHandle": true,
+            "isScrollControlled": false
+        },
+        "tooltip": "{{t.drawer.menu_tooltip}}"
+    },
+    "backgroundColor": "{{token.custom.surface.light}}",
+    "foregroundColor": "{{token.custom.on_surface.light}}",
+    "elevation": 0,
+    "centerTitle": true
+}

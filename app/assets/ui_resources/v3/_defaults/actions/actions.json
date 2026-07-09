@@ -74,6 +74,24 @@
                 "setting": "storage"
             }
         },
+        "navigate_home": {
+            "type": "navigate",
+            "params": {
+                "route": "home"
+            }
+        },
+        "search_news": {
+            "type": "navigate",
+            "params": {
+                "route": "news"
+            }
+        },
+        "navigate_retry": {
+            "type": "navigate",
+            "params": {
+                "route": "home"
+            }
+        },
         "nearby_share": {
             "type": "nearby",
             "params": {

@@ -1,16 +1,30 @@
 {
-  "version": "3.0.0",
-  "locale": "mx",
+  "version": "3.1.0",
+  "locale": "es",
   "nav": {
     "home": "Inicio",
-    "matches": "Partidos",
+    "events": "Eventos",
     "offers": "Ofertas",
     "news": "Noticias",
     "app_name": "Line Game",
     "app_subtitle": "Tu centro deportivo",
     "main_section": "Principal",
     "settings_section": "Ajustes",
-    "security_policy": "Política de seguridad"
+    "security_policy": "Política de seguridad",
+    "live": "En vivo",
+    "line": "Línea",
+    "back_tooltip": "Volver al inicio"
+  },
+  "tabs": {
+    "all": "Todas",
+    "analytics": "Análisis",
+    "interviews": "Entrevistas"
+  },
+  "drawer": {
+    "settings": "Ajustes",
+    "about": "Acerca de",
+    "share": "Compartir",
+    "menu_tooltip": "Menú"
   },
   "sports": {
     "football": "Fútbol",
@@ -70,10 +84,13 @@
   "offers": {
     "title": "Ofertas",
     "rating_label": "Clasificación: {{rating}}/5",
-    "button_play": "Jugar ahora"
+    "button_play": "Jugar ahora",
+    "get_bonus": "Obtener bono",
+    "empty_title": "Sin ofertas aún"
   },
   "news": {
     "title": "Noticias",
+    "search_hint": "Buscar noticias...",
     "time": {
       "just_now": "Ahora",
       "minutes_ago": "hace {n} min",
@@ -91,10 +108,14 @@
     "liga_mx": "Liga MX",
     "concachampions": "Concachampions",
     "nba": "NBA",
-    "euroleague": "Euroleague",
-    "vtb": "VTB",
+    "euroleague": "Euroliga",
+    "vtb": "VTB United League",
     "nhl": "NHL",
     "khl": "KHL",
-    "other": "Otro"
+    "other": "Otros"
+  },
+  "actions": {
+    "share_text": "¡Únete a Line Game — tu centro deportivo!",
+    "share_event_text": "¡Mira este partido en Line Game!"
   }
 }
