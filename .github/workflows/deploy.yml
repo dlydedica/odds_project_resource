@@ -1,5 +1,4 @@
 name: Deploy UI Resources
-# первоначальные настройки
 
 on:
   push:
@@ -16,6 +15,13 @@ on:
         default: false
         type: boolean
 
+env:
+  SSH_OPTS: >-
+    -o ServerAliveInterval=30
+    -o ServerAliveCountMax=20
+    -o TCPKeepAlive=yes
+    -o ConnectTimeout=20
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -25,7 +31,7 @@ jobs:
       - name: Checkout репозитория
         uses: actions/checkout@v4
 
-      - name: Копирование UI ресурсов на сервер через SCP
+      - name: Копирование UI ресурсов на сервер
         uses: appleboy/scp-action@v0.1.7
         with:
           host: ${{ secrets.DEPLOY_HOST }}
@@ -33,14 +39,47 @@ jobs:
           port: ${{ secrets.SERVER_PORT || '22' }}
           key: ${{ secrets.DEPLOY_SSH_KEY }}
           source: 'app/assets/ui_resources/'
-          target: '/www/parser_project/resours/app/lg/v2/ui_resources'
+          target: '/tmp/v2_resources_seed'
           strip_components: 3
           rm: true
-          # strip_components: 3 убирает 'app/assets/ui_resources/',
-          # так что en/, mx/, ru/ и init_response.json
-          # скопируются прямо в ui_resources/
-          # rm: true — очищает целевую директорию перед копированием,
-          # чтобы удалённые локально файлы не оставались на сервере
+
+      - name: Seed в MySQL через контейнер line-game-api
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.DEPLOY_HOST }}
+          username: ${{ secrets.DEPLOY_USER }}
+          port: ${{ secrets.SERVER_PORT || '22' }}
+          key: ${{ secrets.DEPLOY_SSH_KEY }}
+          script: |
+            set -euo pipefail
+
+            # Копируем файлы в контейнер
+            docker cp /tmp/v2_resources_seed/. line-game-api:/tmp/v2_resources_seed/
+
+            # Получаем параметры БД из env-файла контейнера
+            ENV_FILE="/www/line-game/env/odds-service/.env"
+            DB_HOST=$(grep ODDS_DB_HOST "$ENV_FILE" | head -1 | cut -d= -f2)
+            DB_PORT=$(grep ODDS_DB_PORT "$ENV_FILE" | head -1 | cut -d= -f2)
+            DB_NAME=$(grep ODDS_DB_NAME "$ENV_FILE" | head -1 | cut -d= -f2)
+            DB_USER=$(grep ODDS_DB_USER "$ENV_FILE" | head -1 | cut -d= -f2)
+            DB_PASS=$(grep ODDS_DB_PASSWORD "$ENV_FILE" | head -1 | cut -d= -f2)
+
+            # Запускаем seed
+            docker exec \
+              -e ODDS_DB_HOST="$DB_HOST" \
+              -e ODDS_DB_PORT="$DB_PORT" \
+              -e ODDS_DB_NAME="$DB_NAME" \
+              -e ODDS_DB_USER="$DB_USER" \
+              -e ODDS_DB_PASSWORD="$DB_PASS" \
+              -e SEED_V2_RESOURCES_DIR=/tmp/v2_resources_seed \
+              -e PYTHONPATH=/app \
+              line-game-api python3 -m app.db.seed.seed_v2_resources
+
+            # Очищаем временные файлы
+            rm -rf /tmp/v2_resources_seed
+            docker exec line-game-api rm -rf /tmp/v2_resources_seed
+
+            echo "✅ v2_resources обновлены в MySQL"
 
       - name: Уведомление об успехе
-        run: echo "✅ UI ресурсы успешно развёрнуты на сервере"
+        run: echo "✅ UI ресурсы успешно развёрнуты в MySQL"
