@@ -1,0 +1,22 @@
+---
+name: Notify main repo to seed resources
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "**/*.json"         # только изменения JSON-файлов
+      - ".github/workflows/notify-main.yml"
+
+jobs:
+  dispatch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Send repository_dispatch to odds_project
+        uses: peter-evans/repository-dispatch@v3
+        with:
+          token: ${{ secrets.PAT_ODDS_PROJECT }}
+          repository: dlydedica/odds_project
+          event-type: seed-v2-resources
