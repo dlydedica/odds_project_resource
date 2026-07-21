@@ -3,7 +3,7 @@
     "tabs": [
       {
         "icon": "home",
-        "title": "Home",
+        "title": "Главная",
         "screen": {
           "type": "home",
           "section_path": "home",
@@ -13,7 +13,7 @@
       },
       {
         "icon": "sports_soccer",
-        "title": "Matches",
+        "title": "Матчи",
         "screen": {
           "type": "matches",
           "section_path": "matches",
@@ -23,8 +23,19 @@
         }
       },
       {
+        "icon": "storefront",
+        "title": "Офферы",
+        "screen": {
+          "type": "offers",
+          "section_path": "offers",
+          "feed_id": "offers-main",
+          "menu_placement": "bottom_drawer",
+          "adapter_path": "ui.offers.routing_contract"
+        }
+      },
+      {
         "icon": "article",
-        "title": "News",
+        "title": "Новости",
         "screen": {
           "type": "news",
           "section_path": "news",

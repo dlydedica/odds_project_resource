@@ -23,17 +23,6 @@
         }
       },
       {
-        "icon": "storefront",
-        "title": "Офферы",
-        "screen": {
-          "type": "offers",
-          "section_path": "offers",
-          "feed_id": "offers-main",
-          "menu_placement": "bottom_drawer",
-          "adapter_path": "ui.offers.routing_contract"
-        }
-      },
-      {
         "icon": "article",
         "title": "Новости",
         "screen": {
