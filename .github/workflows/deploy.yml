@@ -56,23 +56,9 @@ jobs:
             # Копируем файлы в контейнер
             docker cp /tmp/v2_resources_seed/. line-game-api:/tmp/v2_resources_seed/
 
-            # Получаем параметры БД из env-файла контейнера
-            ENV_FILE="/www/line-game/env/odds-service/.env"
-            DB_HOST=$(grep ODDS_DB_HOST "$ENV_FILE" | head -1 | cut -d= -f2)
-            DB_PORT=$(grep ODDS_DB_PORT "$ENV_FILE" | head -1 | cut -d= -f2)
-            DB_NAME=$(grep ODDS_DB_NAME "$ENV_FILE" | head -1 | cut -d= -f2)
-            DB_USER=$(grep ODDS_DB_USER "$ENV_FILE" | head -1 | cut -d= -f2)
-            DB_PASS=$(grep ODDS_DB_PASSWORD "$ENV_FILE" | head -1 | cut -d= -f2)
-
-            # Запускаем seed
+            # Запускаем seed — контейнер line-game-api уже имеет все ODDS_DB_* переменные
             docker exec \
-              -e ODDS_DB_HOST="$DB_HOST" \
-              -e ODDS_DB_PORT="$DB_PORT" \
-              -e ODDS_DB_NAME="$DB_NAME" \
-              -e ODDS_DB_USER="$DB_USER" \
-              -e ODDS_DB_PASSWORD="$DB_PASS" \
               -e SEED_V2_RESOURCES_DIR=/tmp/v2_resources_seed \
-              -e PYTHONPATH=/app \
               line-game-api python3 -m app.db.seed.seed_v2_resources
 
             # Очищаем временные файлы
