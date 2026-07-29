@@ -1,0 +1,57 @@
+{
+  "body": {
+    "type": "listView",
+    "padding": [
+      0,
+      12,
+      0,
+      20
+    ],
+    "children": [
+      {
+        "type": "padding",
+        "child": {
+          "i18n": "news.title",
+          "type": "text",
+          "style": {
+            "color": "{{token.onSurface}}",
+            "fontSize": 22,
+            "fontWeight": "w700"
+          }
+        },
+        "padding": [
+          16,
+          0,
+          16,
+          0
+        ]
+      },
+      {
+        "type": "sizedBox",
+        "height": 12
+      },
+      {
+        "type": "listView",
+        "source": "rss:news-rss-main",
+        "padding": [
+          16,
+          0,
+          16,
+          0
+        ],
+        "spacing": 10,
+        "children": [],
+        "shrinkWrap": true,
+        "componentKey": "news-card",
+        "fieldMapping": {
+          "date": "pubDate",
+          "image": "image",
+          "title": "title",
+          "source": "source",
+          "description": "description"
+        }
+      }
+    ]
+  },
+  "type": "scaffold"
+}

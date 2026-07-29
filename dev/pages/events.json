@@ -1,0 +1,62 @@
+{
+  "body": {
+    "type": "listView",
+    "padding": [
+      0,
+      12,
+      0,
+      20
+    ],
+    "children": [
+      {
+        "type": "padding",
+        "child": {
+          "i18n": "nav.events",
+          "type": "text",
+          "style": {
+            "color": "{{token.onSurface}}",
+            "fontSize": 22,
+            "fontWeight": "w700"
+          }
+        },
+        "padding": [
+          16,
+          0,
+          16,
+          0
+        ]
+      },
+      {
+        "type": "sizedBox",
+        "height": 12
+      },
+      {
+        "type": "listView",
+        "source": "json:https://app.line-game.name/v4/events?sports=football,basketball,tennis,hockey,esports&limit=100&status=live,upcoming",
+        "padding": [
+          16,
+          0,
+          16,
+          0
+        ],
+        "spacing": 8,
+        "children": [],
+        "shrinkWrap": true,
+        "componentKey": "event-card",
+        "fieldMapping": {
+          "time": "match_time",
+          "sport": "sport_title",
+          "league": "competition_name",
+          "status": "status",
+          "awayLogo": "team_away_logo",
+          "awayName": "team_away_name",
+          "homeLogo": "team_home_logo",
+          "homeName": "team_home_name",
+          "awayScore": "team_away_score",
+          "homeScore": "team_home_score"
+        }
+      }
+    ]
+  },
+  "type": "scaffold"
+}
